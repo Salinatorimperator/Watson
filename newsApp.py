@@ -9,11 +9,15 @@ from flask import Flask, request, session, g, redirect, url_for, \
 
 app = Flask(__name__)
 
-username = os.environ.get('USERNAME', None)
-password = os.environ.get('PASSWORD', None)
-environment_id = os.environ.get('ENVIRONMENT_ID', None)
-collection_id = os.environ.get('COLLECTION_ID', None)
-endpoint = "https://gateway.watsonplatform.net/discovery/api/v1/environments/"+environment_id+"/collections/"+collection_id+"/query?version=2016-11-07&"
+username = "55661b79-fa4c-4657-901a-d8ccefca3e89"
+    #os.environ.get('USERNAME', None)
+password = "mqOz5JbOZaGQ"
+    #os.environ.get('PASSWORD', None)
+environment_id ="d3755050-a1c6-4cdb-a480-3bc1df719e7d"
+    #os.environ.get('ENVIRONMENT_ID', None)
+collection_id = "c8117070-40cb-44b1-bb6c-29fac8f620d6"
+    #os.environ.get('COLLECTION_ID', None)
+endpoint = "https://gateway.watsonplatform.net/discovery/api/v1/environments/"+environment_id+"/collections/"+collection_id+"/query?version=2017-11-07&"
 
 @app.route('/')
 def error():
