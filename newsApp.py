@@ -50,7 +50,7 @@ def newHeadlines():
 
             
     except Exception as e:
-        print e
+        print(e)
     output = { 'headlines': headlines }  
     return jsonify(output)
 
@@ -100,7 +100,7 @@ def click():
             headlines[comboLen][comboStr][article['title']]=article['url']
 
     except Exception as e:
-        print e
+        print(e)
     
     output = { 'results': { 'nodes': [], 'links': [], 'headlines': headlines, 'combo': combo } }
  
@@ -143,7 +143,7 @@ def click():
                 count1+=1
                     
     except Exception as e:
-        print e 
+        print(e)
                 
     return jsonify(output)
 
@@ -173,7 +173,7 @@ def news_page(keyword):
             
 
     except Exception as e:
-        print e
+        print(e)
  
     try:
         get_url = endpoint+"query=title:\""+keyword+"\"&aggregation=nested(enrichedTitle.entities).filter(enrichedTitle.entities.type:Person).term(enrichedTitle.entities.text,count:100)&count=0"
@@ -186,7 +186,7 @@ def news_page(keyword):
             wordList.append(kword['key'])
         bigWords[keyword]={'wordList':wordList,'expand':1}   
     except Exception as e:
-        print e
+        print(e)
  
     count=0
     nodes.insert(0, {'x': 300, 'y': 200, 'text': keyword, 'size': 3, 'fixed': 1, 'color': '#0066FF', 'expand': 1})
