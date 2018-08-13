@@ -2,39 +2,41 @@ import requests
 import sys
 import os
 import json
-from watson_developer_cloud import DiscoveryV1, ConversationV1
+from watson_developer_cloud import DiscoveryV1
 from flask import Flask, request, session, g, redirect, url_for, \
      abort, render_template, flash, json, jsonify
 
-creds_assist=json.load(open("credenciales", "r"))
+
 
 
 app = Flask(__name__)
 
-discovery_v1 = DiscoveryV1(
-    version="2017-11-07",
-    username="55661b79-fa4c-4657-901a-d8ccefca3e89",
-    password="mqOz5JbOZaGQ",
-    url = 'https://gateway.watsonplatform.net/discovery/api'
-)
+username = "55661b79-fa4c-4657-901a-d8ccefca3e89"
+    #os.environ.get('USERNAME', None)
+password = "mqOz5JbOZaGQ"
+    #os.environ.get('PASSWORD', None)
+environment_id ="d3755050-a1c6-4cdb-a480-3bc1df719e7d"
+    #os.environ.get('ENVIRONMENT_ID', None)
+collection_id = "c8117070-40cb-44b1-bb6c-29fac8f620d6"
+    #os.environ.get('COLLECTION_ID', None)
+endpoint = "https://gateway.watsonplatform.net/discovery/api/v1/environments/"+environment_id+"/collections/"+collection_id+"/query?version=2017-11-07&"
 
 
 
-wall_e = ConversationV1(
-    version="2017-05-26",
-    url=creds_assist['conversation']['url'],
-    username=creds_assist['conversation']['username'],
-    password=creds_assist['conversation']['password']
-
-)
-
-def discovery_docs(keyword):
+def discovery(keyword):
 
     global resultados_query
 
+    discovery = DiscoveryV1(
+        version="2018-03-05",
+        username="55661b79-fa4c-4657-901a-d8ccefca3e89",
+        password="mqOz5JbOZaGQ",
+        url = 'https://gateway.watsonplatform.net/discovery/api'
+    )
 
-    my_query = discovery_v1.query(environment_id='d3755050-a1c6-4cdb-a480-3bc1df719e7d', collection_id='c8117070-40cb-44b1-bb6c-29fac8f620d6', query=keyword)#, filter='enrichedTitle.entities.type:Person', aggregation='nested(enrichedTitle.entities)')
-
+    my_query = discovery.query(environment_id='d3755050-a1c6-4cdb-a480-3bc1df719e7d', collection_id='c8117070-40cb-44b1-bb6c-29fac8f620d6', query=keyword)#, filter='enrichedTitle.entities.type:Person', aggregation='nested(enrichedTitle.entities)')
+                               #, return_fields='{return_fields}')
+    #result=json.dumps(my_query, indent=2)
     resultados_query=my_query['results']
 
     docs=[]
@@ -43,22 +45,6 @@ def discovery_docs(keyword):
 
     return(docs)
 
-def discovery_assistant(keyword):
-
-
-    my_query_assist = discovery_v1.query(environment_id='d3755050-a1c6-4cdb-a480-3bc1df719e7d', collection_id='c8117070-40cb-44b1-bb6c-29fac8f620d6', query=keyword)#, filter='enrichedTitle.entities.type:Person', aggregation='nested(enrichedTitle.entities)')
-
-    result_query=my_query_assist['results']
-
-    print(json.dumps(result_query,indent=2))
-    response=[]
-    for article in resultados_query:
-        response.append(article['extracted_metadata']['filename'])
-
-    return(response)
-
-
-
 def discovery_entities(text):
 
 
@@ -66,60 +52,20 @@ def discovery_entities(text):
     for article in resultados_query:
         if text in article['extracted_metadata']['filename']:
             for entity in article['enriched_text']['entities']:
-                if entity['count']>2:
-                    if entity['text'] in textos:
-                        continue
-                    else:
-                        if entity['text']+".pdf" not in text:
-                            textos.append(entity['text'])
+                    if entity['count']>3:
+                        if entity['text'] in textos:
+                            continue
+                        else:
+                            if entity['text']+".pdf" not in text:
+                                textos.append(entity['text'])
 
     return(textos)
 
 
 @app.route('/')
 def error():
-    
+
     return "Please specify a search term in your URL"
-
-
-@app.route('/api/message', methods=['POST'])
-def get_message():
-
-    user_input = json.loads(request.data.decode("utf-8"))
-    if "input" in user_input:
-        user_text = user_input['input']
-    else:
-        user_text = {"text" : ""}
-    if "context" in user_input:
-        user_context = user_input['context']
-    else:
-        user_context = {}
-
-    wall_e_response = wall_e.message(creds_assist['conversation']['workspace_id'],input=user_text, context=user_context)
-    #print(json.dumps(wall_e_response,indent=2))
-
-    texto_discovery=[]
-
-    if "discovery" in wall_e_response['context']:
-        texto_discovery=wall_e_response['input']['text']
-    #print(texto_discovery)
-    my_query = discovery_v1.query(environment_id='d3755050-a1c6-4cdb-a480-3bc1df719e7d', collection_id='c8117070-40cb-44b1-bb6c-29fac8f620d6', natural_language_query=texto_discovery, passages='true', passages_count=3)#, filter='enrichedTitle.entities.type:Person', aggregation='nested(enrichedTitle.entities)')
-    #print(json.dumps(my_query,indent=2))
-
-
-
-
-    #if len(wall_E_response['intents']) > 0:
-        #Wanna know about the weather
-        #if wall_E_response['intents'][0]['intent'] in ["tiempo", "lugar"]:
-            #return json.dumps(weather_response(c3po_response, c3po, weather))
-    #return weather_response(c3po_response, c3po, weather)
-
-    #Send the response to conversation
-    return json.dumps(wall_e_response)
-
-
-
 
 @app.route('/newHeadlines', methods=['POST'])
 def newHeadlines():
@@ -128,14 +74,14 @@ def newHeadlines():
 
     combos=[]
     headlines={}
-    
-    
+
+
     try:
         get_url = endpoint+"query=title:("+combo+")|enrichedTitle.entities.text:("+combo+")&count=50&return=title,url"
         results2 = requests.get(url=get_url, auth=(username, password))
         response = results2.json()
 
-    
+
         for article in response['results']:
             combos[:]=[]
             for word in comboWords:
@@ -149,10 +95,10 @@ def newHeadlines():
                 headlines[comboLen][comboStr]={}
             headlines[comboLen][comboStr][article['title']]=article['url']
 
-            
+
     except Exception as e:
         print(e)
-    output = { 'headlines': headlines }  
+    output = { 'headlines': headlines }
     return jsonify(output)
 
 @app.route('/click', methods=['GET', 'POST'])
@@ -163,7 +109,7 @@ def click():
     #bigWords=request.json['bigWords']
     index=request.json['current']
     #wordList=request.json['wordList']
-    
+
     x = nodes[index]['x']
     y = nodes[index]['y']
     text = nodes[index]['text']
@@ -207,6 +153,9 @@ def click():
     output = { 'results': { 'nodes': [], 'links': [], 'headlines': headlines, 'combo': combo } }
 
     try:
+        #get_url = endpoint+"query=title:\""+text+"\"&aggregation=nested(enrichedTitle.entities).filter(enrichedTitle.entities.type:Person).term(enrichedTitle.entities.text,count:100)&count=0"
+        #results = requests.get(url=get_url, auth=(username, password))
+        #response=results.json()
 
         #add to bigWords
         wordList = discovery_entities(text)
@@ -218,11 +167,12 @@ def click():
             output['results']['nodes'].append({'x': x, 'y': y, 'text': entity, 'size': 1.5, 'color': 'white', 'expand': 0})
             output['results']['links'].append({'source':length,'target':index})
             length+=1
+            #count1+=1
 
-                    
+
     except Exception as e:
-        print(e) 
-                
+        print(e)
+
     return jsonify(output)
 
 @app.route('/favicon.ico')
@@ -238,16 +188,31 @@ def news_page(keyword):
     headlines={}
     headlines[1]={}
     headlines[1][keyword]={}
-    
+
     bigWords={}
 
- 
-    try:
+    #try:
+     #   get_url = endpoint+"query=title:("+keyword+")|enrichedTitle.entities.text:("+keyword+")&count=50&return=title,url"
+      #  results = requests.get(url=get_url, auth=(username, password))
+       # response = results.json()
 
+        #for article in response['results']:
+         #   headlines[1][keyword][article['title']]=article['url']
+
+
+    #except Exception as e:
+     #   print(e)
+
+    try:
+        #get_url = endpoint+"query=title:\""+keyword+"\"&aggregation=nested(enrichedTitle.entities).filter(enrichedTitle.entities.type:Person).term(enrichedTitle.entities.text,count:100)&count=0"
+        #results = requests.get(url=get_url, auth=(username, password))
+        #response=results.json()
 
         #add to bigWords
-        wordList = discovery_docs(keyword)
-
+        wordList = discovery(keyword)
+        #for kword in response['aggregations'][0]['aggregations'][0]['aggregations'][0]['results']:
+         #   wordList.append(kword['key'])
+        #bigWords[keyword]={'wordList':wordList,'expand':1}
         count=0
         nodes.insert(0, {'x': 300, 'y': 200, 'text': keyword, 'size': 3, 'fixed': 1, 'color': '#0066FF', 'expand': 1})
         for word in wordList: #bigWords[keyword]['wordList']:
@@ -262,9 +227,9 @@ def news_page(keyword):
 
     except Exception as e:
         print(e)
- 
 
-                   
+
+
     return render_template('cloud.html', nodes=json.dumps(nodes), links=json.dumps(links), bigWords=json.dumps(bigWords), headlines=json.dumps(headlines))
 
 port = os.getenv('VCAP_APP_PORT', '8000')
@@ -272,3 +237,54 @@ port = os.getenv('VCAP_APP_PORT', '8000')
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=int(port), debug=True)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ for kword in response['aggregations'][0]['aggregations'][0]['aggregations'][0]['results']:
+        wordList.append(kword['key'])
+        bigWords[text]={'wordList':wordList,'expand':1}
+        output['results']['bigWords']=bigWords
+        count1=0
+        count2=0
+
+        for newWord in wordList:         #bigWords[text]['wordList']:
+            if newWord in words:
+                    output['results']['links'].append({'source':index,'target':words[newWord]})
+                    continue
+            if count2 < 5:
+                for bigWord in bigWords:
+                    if bigWords[bigWord]['expand']==0:
+                        continue
+                    if bigWord == text:
+                        continue
+                    if newWord in bigWords[bigWord]['wordList']:
+                        if newWord not in words:
+                            output['results']['nodes'].append({'x': x, 'y': y, 'text': newWord, 'size': 1.5, 'color': 'white', 'expand': 0})
+                            words[newWord]=length
+                            length+=1
+                            count2+=1
+                        output['results']['links'].append({'source':words[newWord],'target':words[bigWord]})
+                        output['results']['links'].append({'source':words[newWord],'target':index})
+            if newWord not in words and count1 < 5:
+                output['results']['nodes'].append({'x': x, 'y': y, 'text': newWord, 'size': 1.5, 'color': 'white', 'expand': 0})
+                output['results']['links'].append({'source':length,'target':index})
+                length+=1
+                count1+=1

@@ -21,17 +21,26 @@ docs=[]
 for article in results:
    docs.append(article['extracted_metadata']['filename'])
 
+entities=[]
 textos=[]
 count=0
-for entitie in results:
-    entities.append(entitie['enriched_text']['entities'][count])
-    count+1
-    for enti in entities:
-        if enti['count']>3:
-            if enti['text'] in textos | enti['text'] in keyword:
-                continue
-            else:
-                textos.append(enti['text'])
-print(textos)
+
+for article in results:
+    if docs[0] in article['extracted_metadata']['filename']:
+        for entity in article['enriched_text']['entities']:
+            if entity['count']>1:
+                if entity['text'] in textos:# | docs[0] in entity['text']:
+                    continue
+                else:
+                    if docs[0] not in (entity['text']+".pdf"):
+                        textos.append(entity['text'])
+
+text=[]
+for article in results:
+    text.append(article['text'])
+
+for t in text:
+    print(t)
+
 
 

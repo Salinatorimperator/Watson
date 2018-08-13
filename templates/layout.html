@@ -1,11 +1,25 @@
 <!doctype html>
-<title>News Visualization</title>
-<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
-<link href='http://fonts.googleapis.com/css?family=Lato:300,400,900' rel='stylesheet' type='text/css'>
-<script src="{{ url_for('static', filename='jquery.js') }}"></script>
-<script src="http://d3js.org/d3.v3.min.js"></script>
-
-<div class=page>
-  {% block body %}{% endblock %}
-</div>
-
+<html>
+  <head>
+    <title>News Visualization</title>
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/app.css') }}">
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,900' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+  <div class=page>
+    <div class="buscador">
+      <h3>Search for documents</h3>
+      <input type="text" placeholder="">
+    </div>
+    {% block body %}{% endblock %}
+  </div>
+  <script src="{{ url_for('static', filename='js/jquery.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/common.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/api.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/conversation.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/payload.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/global.js') }}"></script>
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+  </body>
+</html>
