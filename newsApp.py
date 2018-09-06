@@ -12,7 +12,7 @@ creds_assist=json.load(open("credenciales", "r"))
 app = Flask(__name__)
 
 discovery_v1 = DiscoveryV1(
-    version="2017-11-07",
+    version="2018-08-01",
     username="55661b79-fa4c-4657-901a-d8ccefca3e89",
     password="mqOz5JbOZaGQ",
     url = 'https://gateway.watsonplatform.net/discovery/api'
@@ -33,7 +33,7 @@ def discovery_docs(keyword):
     global resultados_query
 
 
-    my_query = discovery_v1.query(environment_id='d3755050-a1c6-4cdb-a480-3bc1df719e7d', collection_id='c8117070-40cb-44b1-bb6c-29fac8f620d6', query=keyword)#, filter='enrichedTitle.entities.type:Person', aggregation='nested(enrichedTitle.entities)')
+    my_query = discovery_v1.query(environment_id='868d81c4-735d-40f3-94ad-10cd4f304b43', collection_id='f876ed4e-5f13-4bfb-bf63-c105910d0e17', query=keyword)#, filter='enrichedTitle.entities.type:Person', aggregation='nested(enrichedTitle.entities)')
 
     resultados_query=my_query['results']
 
@@ -46,11 +46,11 @@ def discovery_docs(keyword):
 def discovery_assistant(keyword):
 
 
-    my_query_assist = discovery_v1.query(environment_id='d3755050-a1c6-4cdb-a480-3bc1df719e7d', collection_id='c8117070-40cb-44b1-bb6c-29fac8f620d6', query=keyword)#, filter='enrichedTitle.entities.type:Person', aggregation='nested(enrichedTitle.entities)')
+    my_query_assist = discovery_v1.query(environment_id='868d81c4-735d-40f3-94ad-10cd4f304b43', collection_id='f876ed4e-5f13-4bfb-bf63-c105910d0e17', query=keyword)#, filter='enrichedTitle.entities.type:Person', aggregation='nested(enrichedTitle.entities)')
 
     result_query=my_query_assist['results']
 
-    print(json.dumps(result_query,indent=2))
+    #print(json.dumps(result_query,indent=2))
     response=[]
     for article in resultados_query:
         response.append(article['extracted_metadata']['filename'])
@@ -97,24 +97,25 @@ def get_message():
 
     wall_e_response = wall_e.message(creds_assist['conversation']['workspace_id'],input=user_text, context=user_context)
     #print(json.dumps(wall_e_response,indent=2))
-
+    print(type(wall_e_response))
     texto_discovery=[]
 
     if "discovery" in wall_e_response['context']:
         texto_discovery=wall_e_response['input']['text']
-    #print(texto_discovery)
-    my_query = discovery_v1.query(environment_id='d3755050-a1c6-4cdb-a480-3bc1df719e7d', collection_id='c8117070-40cb-44b1-bb6c-29fac8f620d6', natural_language_query=texto_discovery, passages='true', passages_count=3)#, filter='enrichedTitle.entities.type:Person', aggregation='nested(enrichedTitle.entities)')
-    #print(json.dumps(my_query,indent=2))
+        #print(texto_discovery)
+        query_assistant = discovery_v1.query(environment_id='868d81c4-735d-40f3-94ad-10cd4f304b43', collection_id='f876ed4e-5f13-4bfb-bf63-c105910d0e17', natural_language_query=texto_discovery, passages='true', passages_count=1, deduplicate='false', highlight='true')#, filter='enrichedTitle.entities.type:Person', aggregation='nested(enrichedTitle.entities)')
+        #passages={'text':''}
+        for passage in query_assistant['passages']:
+            #print(passage['passage_text'])
+            wall_e_response['output']['text']=passage['passage_text']
+            print(wall_e_response)
 
+            return json.dumps(wall_e_response)
 
+        #print(passages)
 
-
-    #if len(wall_E_response['intents']) > 0:
-        #Wanna know about the weather
-        #if wall_E_response['intents'][0]['intent'] in ["tiempo", "lugar"]:
-            #return json.dumps(weather_response(c3po_response, c3po, weather))
-    #return weather_response(c3po_response, c3po, weather)
-
+    #print(wall_e_response)
+    #print(type(wall_e_response))
     #Send the response to conversation
     return json.dumps(wall_e_response)
 
