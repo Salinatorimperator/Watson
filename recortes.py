@@ -288,3 +288,166 @@ if __name__ == '__main__':
                 output['results']['links'].append({'source':length,'target':index})
                 length+=1
                 count1+=1
+
+
+
+
+
+function grabHeadlines(d) {
+
+  console.log(combo)
+  var delWord = d.text
+  console.log(delWord)
+  if (combo.indexOf(delWord) == 1) {
+  	combo = combo.replace('"'+delWord+'"|','')
+  }
+  else {
+  	combo = combo.replace('|"'+delWord+'"','')
+  }
+  console.log(combo)
+$.ajax
+  ({
+      type: "POST",
+      url: "{{ url_for('newHeadlines') }}",
+      contentType: 'application/json',
+      dataType: 'json',
+      data: JSON.stringify({'combo': combo}),
+      success: function(data) {
+	  	headlines = data.headlines;
+  	  	loadHeadlines();
+  		}
+  });
+
+}
+
+
+
+function loadHeadlines() {
+    $(".titles").empty();
+    for (var fcount=fixedCount; fcount>0; fcount--) {
+        console.log(fcount)
+        if (fcount in headlines) {
+            for (var c in headlines[fcount]) {
+                for (var h in headlines[fcount][c]) {
+                    $(".titles").append('<a href="'+headlines[fcount][c][h] +'" target="_blank">'+ h + '<hr>')
+                }
+            }
+         }
+    }
+}
+
+
+
+
+df2 = pd.read_csv("air_reserve.csv")
+df2 = pd.read_csv("store_id_relation.csv")
+merged = df1.merge(df2, on="hpg_store_id", how="outer").fillna("-")
+merged.to_csv("merged2.csv", index=False)
+
+
+#esto para eliminar columnsa
+df1.drop(columns=['hpg_store_id'])
+
+#esto para eliminar filas cuando cumplen la condicion, en este caso que air_store_id = -
+df1 = df1.drop(df1[df1.air_store_id == '-'].index)
+
+#esto para crear un nuevo csv solo con esas variables, aunque si quitas la primera columna, te crea una columna con ids automatico
+df1=df1[["air_store_id","visit_datetime","reserve_datetime","reserve_visitors"]]
+
+#esto para unir un csv al final, al air_reserve uno el df1, que en este caso era el anterior
+with open('air_reserve.csv', 'a') as f:
+             df1.to_csv(f, header=False)
+
+
+#en la 43 de layout, despues detodo
+{% block body %}{% endblock %}
+
+
+
+
+#del cloud.html despues de div class graph y antes de script
+
+<div class=headlines>
+
+    <div style="display:none" id="view-change-button" class="button" onclick="PayloadPanel.togglePanel(event, this)">
+    <img class="option full" src="../img/Chat Button.png">
+    <img class="option not-full" src="../img/Code Button.png">
+    </div>
+  <div id="contentParent" class="responsive-columns-wrapper">
+
+    <div id="chat-column-holder" class="responsive-column content-column">
+      <div class="chat-column">
+        <div id="scrollingChat"></div>
+        <label for="textInput" class="inputOutline">
+          <input id="textInput" class="input responsive-column"
+                 placeholder="Type something" type="text"
+                 onkeydown="ConversationPanel.inputKeyDown(event, this)">
+        </label>
+      </div>
+    </div>
+    <div style="display:none"  id="payload-column" class="fixed-column content-column">
+      <div id="payload-initial-message">
+        Type something to see the output
+      </div>
+      <div id="payload-request" class="payload"></div>
+      <div id="payload-response" class="payload"></div>
+    </div>
+  </div>
+
+</div>
+
+
+#cloud.html al principio
+
+{% extends "layout.html" %}
+{% block body %}
+
+#al final
+{% endblock %}
+
+
+
+
+# $('id').keyup(function(){
+    funcion()
+ }
+
+#$(document).ready# $('id').keyup(function(){
+    funcion()
+ }
+
+#$(document).ready
+
+
+
+
+   <script>
+    $(document).ready(function(){
+      $('.buscador').on(function(){
+         var val1 = $("#id_query").val();
+         $.ajax({
+          url: "/search",
+          type: "get",
+          data: {val1: val1},
+          success: function(response) {
+             $(".graph").html('<p>hola</p>');
+          },
+         });
+      });
+    });
+   </script>
+
+
+
+keyword=request.form['query']
+
+
+
+
+<input type="button" onclick="window.location.href='/search'>
+<button type="submit" form='buscador_1' value="Submit"></button>
+
+
+
+
+#al final del render template : headlines=json.dumps(headlines)

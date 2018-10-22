@@ -5,11 +5,22 @@ import json
 from watson_developer_cloud import DiscoveryV1, ConversationV1
 from flask import Flask, request, session, g, redirect, url_for, \
      abort, render_template, flash, json, jsonify
+import flask_sijax
+import webbrowser
+
+
+
+path = os.path.join('.', os.path.dirname(__file__), 'static/js/sijax/')
+
+keyword=''
 
 creds_assist=json.load(open("credenciales", "r"))
 
 
 app = Flask(__name__)
+app.config['SIJAX_STATIC_PATH'] = path
+app.config['SIJAX_JSON_URI'] = '/static/js/sijax/json2.js'
+flask_sijax.Sijax(app)
 
 discovery_v1 = DiscoveryV1(
     version="2018-08-01",
@@ -75,11 +86,11 @@ def discovery_entities(text):
 
     return(textos)
 
+#cambiar al metodo de keyword
+#@app.route('/')
+#def error():
 
-@app.route('/')
-def error():
-    
-    return "Please specify a search term in your URL"
+    #return "Please specify a search term in your URL"
 
 
 @app.route('/api/message', methods=['POST'])
@@ -96,65 +107,25 @@ def get_message():
         user_context = {}
 
     wall_e_response = wall_e.message(creds_assist['conversation']['workspace_id'],input=user_text, context=user_context)
-    #print(json.dumps(wall_e_response,indent=2))
-    print(type(wall_e_response))
-    texto_discovery=[]
+
 
     if "discovery" in wall_e_response['context']:
         texto_discovery=wall_e_response['input']['text']
-        #print(texto_discovery)
+
         query_assistant = discovery_v1.query(environment_id='868d81c4-735d-40f3-94ad-10cd4f304b43', collection_id='f876ed4e-5f13-4bfb-bf63-c105910d0e17', natural_language_query=texto_discovery, passages='true', passages_count=1, deduplicate='false', highlight='true')#, filter='enrichedTitle.entities.type:Person', aggregation='nested(enrichedTitle.entities)')
-        #passages={'text':''}
+
         for passage in query_assistant['passages']:
-            #print(passage['passage_text'])
+
             wall_e_response['output']['text']=passage['passage_text']
+            del wall_e_response['context']['discovery']
             print(wall_e_response)
-
             return json.dumps(wall_e_response)
-
-        #print(passages)
-
-    #print(wall_e_response)
-    #print(type(wall_e_response))
-    #Send the response to conversation
+    # print(wall_e_response)
     return json.dumps(wall_e_response)
 
 
 
 
-@app.route('/newHeadlines', methods=['POST'])
-def newHeadlines():
-    combo = request.json['combo']
-    comboWords=combo.replace("\"","").split('|')
-
-    combos=[]
-    headlines={}
-    
-    
-    try:
-        get_url = endpoint+"query=title:("+combo+")|enrichedTitle.entities.text:("+combo+")&count=50&return=title,url"
-        results2 = requests.get(url=get_url, auth=(username, password))
-        response = results2.json()
-
-    
-        for article in response['results']:
-            combos[:]=[]
-            for word in comboWords:
-                if word.upper() in article['title'].upper():
-                    combos.append(word)
-            comboStr = ''.join(sorted(combos))
-            comboLen = len(combos)
-            if comboLen not in headlines:
-                headlines[comboLen]={}
-            if comboStr not in headlines[comboLen]:
-                headlines[comboLen][comboStr]={}
-            headlines[comboLen][comboStr][article['title']]=article['url']
-
-            
-    except Exception as e:
-        print(e)
-    output = { 'headlines': headlines }  
-    return jsonify(output)
 
 @app.route('/click', methods=['GET', 'POST'])
 def click():
@@ -164,7 +135,7 @@ def click():
     #bigWords=request.json['bigWords']
     index=request.json['current']
     #wordList=request.json['wordList']
-    
+
     x = nodes[index]['x']
     y = nodes[index]['y']
     text = nodes[index]['text']
@@ -211,7 +182,7 @@ def click():
 
         #add to bigWords
         wordList = discovery_entities(text)
-        print(wordList)
+        #print(text)
         #output['results']['links'].append({'source':index,'target':text})
 
         for entity in wordList:
@@ -220,10 +191,10 @@ def click():
             output['results']['links'].append({'source':length,'target':index})
             length+=1
 
-                    
+
     except Exception as e:
-        print(e) 
-                
+        print(e)
+    webbrowser.open_new_tab('https://www.comillas.edu/es/noticias-catedra-industria-conectada/17218-francisco-j-riberas-director-general-de-gestamp-en-el-ciclo-desayunos-cic')
     return jsonify(output)
 
 @app.route('/favicon.ico')
@@ -231,42 +202,70 @@ def favicon():
    return ""
 
 
-@app.route('/<keyword>')
-def news_page(keyword):
-    index=0
+
+
+@app.route('/', methods=['GET','POST'])
+def home():
+
+
+    #if request.method == 'POST':
+        #keyword=request.form['query']
+        #print(keyword)
+    #return render_template('layout.html'nodes=json.dumps(nodes), links=json.dumps(links), bigWords=json.dumps(bigWords), headlines=json.dumps(headlines))
+
+#@app.route('/search', methods=['GET','POST'])
+#def news_page():
+
+    #keyword = Flask.request.args.get('val1')
+    keyword=''
+    wordList=""
     nodes=[]
     links=[]
     headlines={}
     headlines[1]={}
     headlines[1][keyword]={}
-    
-    bigWords={}
+    #print(request.method)
 
- 
-    try:
+    if request.method == 'POST':
+        keyword=request.form['query']
+        #keyword = Flask.request.args.get('val1')
+        index=0
+        #print(keyword)
 
 
-        #add to bigWords
-        wordList = discovery_docs(keyword)
+        bigWords={}
 
-        count=0
-        nodes.insert(0, {'x': 300, 'y': 200, 'text': keyword, 'size': 3, 'fixed': 1, 'color': '#0066FF', 'expand': 1})
-        for word in wordList: #bigWords[keyword]['wordList']:
-            if count > 10:
-                break
-            if word == keyword:
-                continue
-            else:
-                nodes.append({'x': 300, 'y': 200, 'text': word, 'size': 1.5, 'color': 'white', 'expand': 0})
-                links.append({'source':count + 1,'target':0})
-                count+=1
+        try:
 
-    except Exception as e:
-        print(e)
- 
 
-                   
-    return render_template('cloud.html', nodes=json.dumps(nodes), links=json.dumps(links), bigWords=json.dumps(bigWords), headlines=json.dumps(headlines))
+            #add to bigWords
+
+            wordList = discovery_docs(keyword)
+            #print(wordList)
+            count=0
+            nodes.insert(0, {'x': 300, 'y': 200, 'text': keyword, 'size': 3, 'fixed': 1, 'color': '#0066FF', 'expand': 1})
+            for word in wordList: #bigWords[keyword]['wordList']:
+                if count > 10:
+                    break
+                if word == keyword:
+                    continue
+                else:
+                    nodes.append({'x': 300, 'y': 200, 'text': word, 'size': 1.5, 'color': 'white', 'expand': 0})
+                    links.append({'source':count + 1,'target':0})
+                    count+=1
+
+        except Exception as e:
+            print(e)
+
+
+        #print(json.dumps(nodes))
+        return render_template('layout.html', nodes=json.dumps(nodes), links=json.dumps(links), bigWords=json.dumps(wordList))
+        #return jsonify({"graph":wordList})
+
+
+    #wordList = discovery_docs(keyword)
+    #return render_template('layout.html')
+    return render_template('layout.html', nodes=json.dumps(nodes), links=json.dumps(links), bigWords=json.dumps(wordList))
 
 port = os.getenv('VCAP_APP_PORT', '8000')
 
