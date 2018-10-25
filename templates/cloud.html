@@ -1,9 +1,11 @@
-{% extends "layout.html" %}
-{% block body %}
+
 
 <div class=graph></div>
 
 <div class=headlines><div class=titles></div></div>
+
+
+
 
 <script>
 
@@ -170,48 +172,7 @@ function click(d) {
  }
 }
 
-function grabHeadlines(d) {
 
-  console.log(combo)
-  var delWord = d.text
-  console.log(delWord)
-  if (combo.indexOf(delWord) == 1) {
-  	combo = combo.replace('"'+delWord+'"|','')
-  }
-  else {
-  	combo = combo.replace('|"'+delWord+'"','')
-  }
-  console.log(combo)
-$.ajax
-  ({
-      type: "POST",
-      url: "{{ url_for('newHeadlines') }}",
-      contentType: 'application/json',
-      dataType: 'json',
-      data: JSON.stringify({'combo': combo}),
-      success: function(data) {
-	  	headlines = data.headlines;
-  	  	loadHeadlines();
-  		}
-  });	
-  
-}
-
-
-
-function loadHeadlines() {
-    $(".titles").empty();
-    for (var fcount=fixedCount; fcount>0; fcount--) {
-        console.log(fcount)
-        if (fcount in headlines) {
-            for (var c in headlines[fcount]) {
-                for (var h in headlines[fcount][c]) {
-                    $(".titles").append('<a href="'+headlines[fcount][c][h] +'" target="_blank">'+ h + '<hr>')
-                }
-            }
-         }
-    }
-}
 function tick(e) {
   var q = d3.geom.quadtree(nodes),
       k = e.alpha*.1
@@ -301,4 +262,3 @@ function collide(nde, e) {
 
 </script>
 
-{% endblock %}

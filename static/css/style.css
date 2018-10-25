@@ -24,9 +24,9 @@ hr              { border: 0; height: 0; border-top: 1px solid rgba(0,0,0,0.1); b
 .link           { stroke: #999; stroke-width: .5px;}
 #loading        { display: none;}
 #chart          { margin: auto; display: none; }
-.graph          { width: 75%; height: 100%; background: #383838; 
+.graph          { width: 75%; height: 91%; background: #383838;
                    float: left}
-.headlines      { width: 25%;  height: 100%; float: left; 
+.headlines      { width: 25%;  height: 91%; float: left;
                    overflow-y: auto;
                   } 
 .titles         { padding: .5em }
