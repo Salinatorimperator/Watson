@@ -12,8 +12,6 @@ import webbrowser
 
 path = os.path.join('.', os.path.dirname(__file__), 'static/js/sijax/')
 
-keyword=''
-
 creds_assist=json.load(open("credenciales", "r"))
 
 
@@ -260,7 +258,7 @@ def home():
 
         #print(json.dumps(nodes))
         return render_template('layout.html', nodes=json.dumps(nodes), links=json.dumps(links), bigWords=json.dumps(wordList))
-        #return jsonify({"graph":wordList})
+        #return Flask.jsonify({"graph":wordList})
 
 
     #wordList = discovery_docs(keyword)
