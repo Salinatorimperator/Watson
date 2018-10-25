@@ -20,24 +20,14 @@ app.config['SIJAX_STATIC_PATH'] = path
 app.config['SIJAX_JSON_URI'] = '/static/js/sijax/json2.js'
 flask_sijax.Sijax(app)
 
-<<<<<<< HEAD
-username = "55661b79-fa4c-4657-901a-d8ccefca3e89"
-    #os.environ.get('USERNAME', None)
-password = "mqOz5JbOZaGQ"
-    #os.environ.get('PASSWORD', None)
-environment_id ="d3755050-a1c6-4cdb-a480-3bc1df719e7d"
-    #os.environ.get('ENVIRONMENT_ID', None)
-collection_id = "c8117070-40cb-44b1-bb6c-29fac8f620d6"
-    #os.environ.get('COLLECTION_ID', None)
-endpoint = "https://gateway.watsonplatform.net/discovery/api/v1/environments/"+environment_id+"/collections/"+collection_id+"/query?version=2017-11-07&"
-=======
+
 discovery_v1 = DiscoveryV1(
     version="2018-08-01",
     username="55661b79-fa4c-4657-901a-d8ccefca3e89",
     password="mqOz5JbOZaGQ",
     url = 'https://gateway.watsonplatform.net/discovery/api'
 )
->>>>>>> funciona
+
 
 
 
@@ -135,16 +125,6 @@ def get_message():
 
 
 
-
-<<<<<<< HEAD
-            
-    except Exception as e:
-        print(e)
-    output = { 'headlines': headlines }  
-    return jsonify(output)
-=======
->>>>>>> funciona
-
 @app.route('/click', methods=['GET', 'POST'])
 def click():
 
@@ -193,11 +173,7 @@ def click():
 
     except Exception as e:
         print(e)
-<<<<<<< HEAD
-    
-=======
 
->>>>>>> funciona
     output = { 'results': { 'nodes': [], 'links': [], 'headlines': headlines, 'combo': combo } }
 
     try:
@@ -216,11 +192,9 @@ def click():
 
     except Exception as e:
         print(e)
-<<<<<<< HEAD
-                
-=======
+
     webbrowser.open_new_tab('https://www.comillas.edu/es/noticias-catedra-industria-conectada/17218-francisco-j-riberas-director-general-de-gestamp-en-el-ciclo-desayunos-cic')
->>>>>>> funciona
+
     return jsonify(output)
 
 @app.route('/favicon.ico')
@@ -252,37 +226,7 @@ def home():
     headlines[1][keyword]={}
     #print(request.method)
 
-<<<<<<< HEAD
-    except Exception as e:
-        print(e)
- 
-    try:
-        get_url = endpoint+"query=title:\""+keyword+"\"&aggregation=nested(enrichedTitle.entities).filter(enrichedTitle.entities.type:Person).term(enrichedTitle.entities.text,count:100)&count=0"
-        results = requests.get(url=get_url, auth=(username, password)) 
-        response=results.json()
 
-        #add to bigWords
-        wordList = []
-        for kword in response['aggregations'][0]['aggregations'][0]['aggregations'][0]['results']:
-            wordList.append(kword['key'])
-        bigWords[keyword]={'wordList':wordList,'expand':1}   
-    except Exception as e:
-        print(e)
- 
-    count=0
-    nodes.insert(0, {'x': 300, 'y': 200, 'text': keyword, 'size': 3, 'fixed': 1, 'color': '#0066FF', 'expand': 1})
-    for word in bigWords[keyword]['wordList']:
-        if count > 9:
-            break
-        if word == keyword:
-            continue
-        else:
-            nodes.append({'x': 300, 'y': 200, 'text': word, 'size': 1.5, 'color': 'white', 'expand': 0})
-            links.append({'source':count + 1,'target':0})
-            count+=1
-                   
-    return render_template('cloud.html', nodes=json.dumps(nodes), links=json.dumps(links), bigWords=json.dumps(bigWords), headlines=json.dumps(headlines))
-=======
     if request.method == 'POST':
         keyword=request.form['query']
         #keyword = Flask.request.args.get('val1')
@@ -323,7 +267,7 @@ def home():
     #wordList = discovery_docs(keyword)
     #return render_template('layout.html')
     return render_template('layout.html', nodes=json.dumps(nodes), links=json.dumps(links), bigWords=json.dumps(wordList))
->>>>>>> funciona
+
 
 port = os.getenv('VCAP_APP_PORT', '8000')
 
