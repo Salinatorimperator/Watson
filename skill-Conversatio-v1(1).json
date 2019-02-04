@@ -1,0 +1,3506 @@
+{
+  "name": "Conversatio-v1",
+  "intents": [
+    {
+      "intent": "ciberseguridad",
+      "examples": [
+        {
+          "text": "que es la siberseguridad"
+        },
+        {
+          "text": "que riesgos tiene mi sistema"
+        },
+        {
+          "text": "que implica la ciberseguridad"
+        },
+        {
+          "text": "puedo estar tranquilo con mi antivirus"
+        },
+        {
+          "text": "es mi sistema seguro"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "noticias",
+      "examples": [
+        {
+          "text": "cual es el ultimo articulo"
+        },
+        {
+          "text": "puedes mostrarme las ultimas noticias"
+        },
+        {
+          "text": "puedes darme noticias interesantes relacionadas"
+        },
+        {
+          "text": "cual es el ultimo articulo relacionado con"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "tesis",
+      "examples": [
+        {
+          "text": "existe algun trabajo"
+        },
+        {
+          "text": "alguien ha hecho ya esto"
+        },
+        {
+          "text": "hay algun PFG"
+        },
+        {
+          "text": "hay algun TFG"
+        },
+        {
+          "text": "alguein ha escrito una tesis sobre"
+        },
+        {
+          "text": "puedes encotrar informacion sobre"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Bot_Control_Ignore_Undo",
+      "examples": [
+        {
+          "text": "Eso no es lo que estoy diciendo."
+        },
+        {
+          "text": "Olvídalo, no entendiste."
+        },
+        {
+          "text": "No es lo que estoy buscando."
+        },
+        {
+          "text": "No es correcto, olvídalo."
+        },
+        {
+          "text": "No entendiste, olvídalo."
+        },
+        {
+          "text": "No entendiste, iniciemos de nuevo."
+        },
+        {
+          "text": "Me he dado cuenta que eso no es lo que estoy buscando."
+        },
+        {
+          "text": "Lo dire nuevamente."
+        },
+        {
+          "text": "He cambiado de opinion."
+        },
+        {
+          "text": "Esto no es lo que quiero."
+        },
+        {
+          "text": "Espera, estamos hablando de cosas diferentes."
+        },
+        {
+          "text": "Eso no es lo que quiero."
+        },
+        {
+          "text": "Creo que quiero algo difertente."
+        },
+        {
+          "text": "Volvamos un paso atrás."
+        },
+        {
+          "text": "Volvamos al tema inicial."
+        },
+        {
+          "text": "Volvamos al tema anterior."
+        },
+        {
+          "text": "Volvamos a iniciar."
+        },
+        {
+          "text": "Te lo voy a repetir."
+        },
+        {
+          "text": "Quieres te lo repita?"
+        },
+        {
+          "text": "Olvidalo."
+        }
+      ],
+      "description": "Pídale al bot que retroceda un paso."
+    },
+    {
+      "intent": "patronos",
+      "examples": [
+        {
+          "text": "quienes son los patronos de la catedra"
+        },
+        {
+          "text": "que tipo de servicio da cada patrono"
+        },
+        {
+          "text": "donde puedo conseguir practicas"
+        },
+        {
+          "text": "quien financia la catedra"
+        },
+        {
+          "text": "quienes son los diez patronos"
+        },
+        {
+          "text": "cuantos trabajadores"
+        },
+        {
+          "text": "cuantos empleados"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "vr",
+      "examples": [
+        {
+          "text": "quien utiliza vr"
+        },
+        {
+          "text": "cuanto cuestan unas gafas de vr"
+        },
+        {
+          "text": "que es la realidad virtual"
+        },
+        {
+          "text": "que es la vr"
+        },
+        {
+          "text": "puedo conseguir realidad virtual"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "greetings",
+      "examples": [
+        {
+          "text": "hola como estas"
+        },
+        {
+          "text": "Hi, my name is Michel"
+        },
+        {
+          "text": "hi how are u"
+        },
+        {
+          "text": "hi"
+        },
+        {
+          "text": "hey there"
+        },
+        {
+          "text": "heya"
+        },
+        {
+          "text": "hey"
+        },
+        {
+          "text": "Hello Watson"
+        },
+        {
+          "text": "Hello, My name is John?"
+        },
+        {
+          "text": "hello, my name is esteban"
+        },
+        {
+          "text": "Hello, how are you"
+        },
+        {
+          "text": "Hello"
+        },
+        {
+          "text": "greetings"
+        },
+        {
+          "text": "good morning"
+        },
+        {
+          "text": "good how are you"
+        },
+        {
+          "text": "good evening"
+        },
+        {
+          "text": "good day"
+        },
+        {
+          "text": "Good afternoon."
+        },
+        {
+          "text": "good"
+        },
+        {
+          "text": "g'day"
+        },
+        {
+          "text": "feeling bit low"
+        },
+        {
+          "text": "fdsafsaHi watson"
+        },
+        {
+          "text": "ciao"
+        },
+        {
+          "text": "buenos dias"
+        },
+        {
+          "text": "buenas dias"
+        },
+        {
+          "text": "bonjour"
+        },
+        {
+          "text": "aloha"
+        },
+        {
+          "text": "yo"
+        },
+        {
+          "text": "yo my man"
+        },
+        {
+          "text": "namaste"
+        },
+        {
+          "text": "I would like you to say hello"
+        },
+        {
+          "text": "howdy"
+        },
+        {
+          "text": "How are you doing"
+        },
+        {
+          "text": "Hola"
+        },
+        {
+          "text": "hiya"
+        },
+        {
+          "text": "Hi, Watson, my name is John"
+        },
+        {
+          "text": "Hi watson"
+        },
+        {
+          "text": "hi to whom had like"
+        },
+        {
+          "text": "hi there"
+        },
+        {
+          "text": "Hi, my name is Diego"
+        },
+        {
+          "text": "yello"
+        },
+        {
+          "text": "What's up?"
+        },
+        {
+          "text": "What's up ?"
+        },
+        {
+          "text": "What's up"
+        },
+        {
+          "text": "what r u doing"
+        },
+        {
+          "text": "what doing"
+        },
+        {
+          "text": "sup"
+        },
+        {
+          "text": "say hello to me"
+        }
+      ]
+    },
+    {
+      "intent": "IoT",
+      "examples": [
+        {
+          "text": "que es el iot"
+        },
+        {
+          "text": "que es el internet de las cosas"
+        },
+        {
+          "text": "como puedo usar el iot"
+        },
+        {
+          "text": "que aparatos utilizan el internet de las cosas"
+        },
+        {
+          "text": "trabajan todas las maquinas con iot"
+        },
+        {
+          "text": "que maquinas tienen iot"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "not_specified",
+      "examples": [
+        {
+          "text": "whatever"
+        },
+        {
+          "text": "your favorite"
+        },
+        {
+          "text": "anything"
+        },
+        {
+          "text": "you decide"
+        },
+        {
+          "text": "you can go with your favorite"
+        },
+        {
+          "text": "Whatever you like"
+        },
+        {
+          "text": "whatever you feel like"
+        },
+        {
+          "text": "Whatever is farthest"
+        },
+        {
+          "text": "play whatever you want"
+        },
+        {
+          "text": "play anything u like"
+        },
+        {
+          "text": "Pick any"
+        },
+        {
+          "text": "no preference"
+        },
+        {
+          "text": "anything is fine"
+        },
+        {
+          "text": "anything would do"
+        },
+        {
+          "text": "as a matter of"
+        },
+        {
+          "text": "but it doesn't really"
+        },
+        {
+          "text": "do anything"
+        },
+        {
+          "text": "doesn't matter"
+        },
+        {
+          "text": "any one"
+        },
+        {
+          "text": "I don't see anything"
+        },
+        {
+          "text": "I don't see any options"
+        },
+        {
+          "text": "I don't see any"
+        },
+        {
+          "text": "I doesn't matter to me."
+        },
+        {
+          "text": "i didn't see any options"
+        },
+        {
+          "text": "I am not identifying any thing here"
+        },
+        {
+          "text": "I did not say turn in anything I entered"
+        },
+        {
+          "text": "Any of them."
+        },
+        {
+          "text": "any of them"
+        },
+        {
+          "text": "any near"
+        },
+        {
+          "text": "any goddam one!!!!"
+        },
+        {
+          "text": "any"
+        }
+      ]
+    },
+    {
+      "intent": "Bot_Control_Approve_Response",
+      "examples": [
+        {
+          "text": "Es exactamente lo que estaba pensando."
+        },
+        {
+          "text": "Has sido de gran ayuda"
+        },
+        {
+          "text": "Justo lo que necesitaba."
+        },
+        {
+          "text": "Maravilloso"
+        },
+        {
+          "text": "Muy bien, gracias."
+        },
+        {
+          "text": "Muy bueno."
+        },
+        {
+          "text": "Perfecto"
+        },
+        {
+          "text": "Si, es eso lo que busco."
+        },
+        {
+          "text": "Afirmativo."
+        },
+        {
+          "text": "Bien, lo haremos."
+        },
+        {
+          "text": "Brillante respuesta."
+        },
+        {
+          "text": "Buen trabajo."
+        },
+        {
+          "text": "Correcto, es lo que estaba buscando"
+        },
+        {
+          "text": "De acuerdo."
+        },
+        {
+          "text": "Es correcto."
+        },
+        {
+          "text": "Es exactamente lo que necesitamos."
+        },
+        {
+          "text": "Esta todo perfecto."
+        },
+        {
+          "text": "Excelente respuesta."
+        },
+        {
+          "text": "Excelente trabajo."
+        },
+        {
+          "text": "Gran trabajo."
+        }
+      ],
+      "description": "Acknowledge that the response satisfies a question."
+    },
+    {
+      "intent": "General_Connect_to_Agent",
+      "examples": [
+        {
+          "text": "Necesito hablar con una persona real, en lugar de un sistema automatizado de respuestas, por favor."
+        },
+        {
+          "text": "Perfecto. Ahora, me gustaría hablar con un agente sobre algunos cargos."
+        },
+        {
+          "text": "Pasame con un agente experto!"
+        },
+        {
+          "text": "Necesito hablar directamente con un agente."
+        },
+        {
+          "text": "Ayudame a ponerme en contacto con una persona."
+        },
+        {
+          "text": "Esto es muy frustrante, quiero actuar con una persona viva y real."
+        },
+        {
+          "text": "Hay algún ser vivo con cuál podría hablar?"
+        },
+        {
+          "text": "Hola, ¿podría transferirme al agente vivo, por favor?"
+        },
+        {
+          "text": "¿Puedes ayudarme a conectar con un agente?"
+        },
+        {
+          "text": "¿Puedo tener información de contacto para hablar con un agente real?"
+        },
+        {
+          "text": "Hola, ¿puedes transferir mi llamada a un agente humano? Deseo hablar directamente con un ser humano."
+        },
+        {
+          "text": "Llama un representante."
+        },
+        {
+          "text": "Mi factura está incorrecta, quiero hablar con un representante."
+        },
+        {
+          "text": "Nada contra maquinas, pero ponme con un operador."
+        },
+        {
+          "text": "Transferirme a un agente por favor."
+        },
+        {
+          "text": "¿Hay un número de servicio al cliente que pueda usar para contactar a la compañía telefónica y hablar directamente con un agente?"
+        },
+        {
+          "text": "Hola! Estaba hablando con un agente y se me ha quedado colgado el chat y he perdido la conexión."
+        },
+        {
+          "text": "¿Puede enviarme un número telefónico para que hable con un representante humano de ventas?"
+        },
+        {
+          "text": "Por favor ayudame a contactar a un agente."
+        },
+        {
+          "text": "Podrías ponerme en contacto con un operador?"
+        }
+      ],
+      "description": "Solicitar un agente humano"
+    },
+    {
+      "intent": "contacto",
+      "examples": [
+        {
+          "text": "con quien hablo"
+        },
+        {
+          "text": "con quien hablo para inscribirme"
+        },
+        {
+          "text": "con quien puedo contactar"
+        }
+      ]
+    },
+    {
+      "intent": "respuestas_decision",
+      "examples": [
+        {
+          "text": "si 100%"
+        },
+        {
+          "text": "si porfavor"
+        },
+        {
+          "text": "si por favor"
+        },
+        {
+          "text": "ni idea"
+        },
+        {
+          "text": "no"
+        },
+        {
+          "text": "si"
+        },
+        {
+          "text": "no gracias"
+        },
+        {
+          "text": "si gracias"
+        },
+        {
+          "text": "no gracia"
+        },
+        {
+          "text": "puede"
+        }
+      ]
+    },
+    {
+      "intent": "Bot_Control_Change_Subject",
+      "examples": [
+        {
+          "text": "Deseo hablar con un agente."
+        },
+        {
+          "text": "Cambiemos de conversación."
+        },
+        {
+          "text": "Continuamos con otro tema."
+        },
+        {
+          "text": "Hablame de otro tema."
+        },
+        {
+          "text": "Me gustaria que empecemos de nuevo"
+        },
+        {
+          "text": "Podemos cambiar el tema?"
+        },
+        {
+          "text": "Podemos continuar con la otra solicitud?"
+        },
+        {
+          "text": "Podemos hablar de otra cosa?"
+        },
+        {
+          "text": "Puede ayudarme con otra solicitud?"
+        },
+        {
+          "text": "Puede decirme algo sobre ti?"
+        },
+        {
+          "text": "Puedo hablar con una persona?"
+        },
+        {
+          "text": "Puedo hacer una solicitud diferente."
+        },
+        {
+          "text": "Que estas haciendo ahora?"
+        },
+        {
+          "text": "Quiero otra solicitud."
+        },
+        {
+          "text": "Quiero terminar la conversación."
+        },
+        {
+          "text": "Voy a cambiar de tema."
+        },
+        {
+          "text": "Ya no necesito su ayuda."
+        },
+        {
+          "text": "Ya no quiero continuar con esa solicitud."
+        },
+        {
+          "text": "Ya no quiero continuar con esta conversación"
+        },
+        {
+          "text": "Ya no quiero seguir con esta conversación."
+        }
+      ],
+      "description": "Cambiar a un tema diferente."
+    },
+    {
+      "intent": "money",
+      "examples": [
+        {
+          "text": "cuanto cuesta"
+        },
+        {
+          "text": "cuanto es"
+        },
+        {
+          "text": "cuanto hay que pagar"
+        },
+        {
+          "text": "cuanto dinero hay que pagar"
+        },
+        {
+          "text": "cuanto es al año"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "ofertas_trabajo",
+      "examples": [
+        {
+          "text": "que ofertas de trabajo tiene la catedra"
+        },
+        {
+          "text": "que practicas ofrecen los patronos"
+        },
+        {
+          "text": "hay oferta de practicas"
+        },
+        {
+          "text": "que ofertas dan los patronos"
+        },
+        {
+          "text": "que oferta de trabajos"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "catedra",
+      "examples": [
+        {
+          "text": "en que proyectos está trabajando la catedra"
+        },
+        {
+          "text": "cuales son los proximos eventos de la catedra"
+        },
+        {
+          "text": "cuales son los proyectos de la catedra"
+        },
+        {
+          "text": "proximos eventos"
+        },
+        {
+          "text": "ultimas noticias"
+        },
+        {
+          "text": "cuales son las ultimas noticias relacionadas con la catedra"
+        },
+        {
+          "text": "que es el observatorio"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "interface_interactions",
+      "examples": [
+        {
+          "text": "slow down the speech"
+        },
+        {
+          "text": "hello can you hear me?"
+        },
+        {
+          "text": "do you speak languages other than english"
+        },
+        {
+          "text": "do you know non-english languages"
+        },
+        {
+          "text": "can you speak something with me?"
+        },
+        {
+          "text": "can you read me"
+        },
+        {
+          "text": "can you interact in other languages"
+        },
+        {
+          "text": "Can you hear me?"
+        },
+        {
+          "text": "Can i ask you something in spanish?"
+        },
+        {
+          "text": "what languages do you know"
+        },
+        {
+          "text": "tell me, what languages do you speak"
+        },
+        {
+          "text": "I want to talk"
+        }
+      ]
+    },
+    {
+      "intent": "Bot_Control_Start_Over",
+      "examples": [
+        {
+          "text": "Necesito que comencemos de nuevo."
+        },
+        {
+          "text": "Empecemos de nuevo."
+        },
+        {
+          "text": "Empezamos nuevamente?"
+        },
+        {
+          "text": "Iniciamos de nuevo?"
+        },
+        {
+          "text": "Iniciamos una vez mas?"
+        },
+        {
+          "text": "Iniciemos de nuevo."
+        },
+        {
+          "text": "Lo intentamos otra vez?"
+        },
+        {
+          "text": "Podemos intentarlo una vez mas?"
+        },
+        {
+          "text": "Podemos repetir todo desde el inicio?"
+        },
+        {
+          "text": "Podemos volver a la conversacion inicial?"
+        },
+        {
+          "text": "Podemos volver al punto inicial?"
+        },
+        {
+          "text": "Por favor, podemos empezar de nuevo?"
+        },
+        {
+          "text": "Puede repetir desde el inicio?"
+        },
+        {
+          "text": "Quiero ver todo desde el inicio."
+        },
+        {
+          "text": "Quiero volver al inicio"
+        },
+        {
+          "text": "Reiniciemos."
+        },
+        {
+          "text": "Una vez mas."
+        },
+        {
+          "text": "Volvamos a la conversación."
+        },
+        {
+          "text": "Volvamos al inicio."
+        },
+        {
+          "text": "Yo quiero iniciar de nuevo"
+        }
+      ],
+      "description": "Reinicia el bot"
+    },
+    {
+      "intent": "resarch",
+      "examples": [
+        {
+          "text": "Quiero encontrar informacion sobre"
+        },
+        {
+          "text": "Sabes quien es"
+        },
+        {
+          "text": "No encuentro datos"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "General_Agent_Capabilities",
+      "examples": [
+        {
+          "text": "¿Podría esperar un segundo por favor?"
+        },
+        {
+          "text": "¿Puedes ayudarme en cómo iniciar sesión en Virtual Agent?"
+        },
+        {
+          "text": "¿Puedes darme una lista de temas de cosas con las que puedes ayudarme?"
+        },
+        {
+          "text": "¿Puedes esperar un poquito?"
+        },
+        {
+          "text": "¿Puedo tener una lista de temas disponibles, con los que puedes ayudarme?"
+        },
+        {
+          "text": "¿Qué clase de cosas haces?"
+        },
+        {
+          "text": "¿Qué hace un agente digital? ¿Para qué te uso?"
+        },
+        {
+          "text": "¿Qué pasa si quiero cambiar la respuesta de texto para una intención?"
+        },
+        {
+          "text": "¿Qué tipo de cosas puede hacer por mí?"
+        },
+        {
+          "text": "¿Qué tipo de información y problemas puedes resolver para mí?"
+        },
+        {
+          "text": "¿Qué tipo de preguntas puedes contestar? ¿Y cuáles son tus limitaciones de respuestas?"
+        },
+        {
+          "text": "Tengo algunas preguntas y necesito ayuda, ¿puedo recibir ayuda?"
+        },
+        {
+          "text": "Tengo varios problemas y necesito saber con qué me puede ayudar."
+        },
+        {
+          "text": "¿Cómo funciona el filtro en la pantalla de capacidades?"
+        },
+        {
+          "text": "¿Con qué categorías de problemas están capaz de ayudarme?"
+        },
+        {
+          "text": "Tengo algunos problemas y quiero algo de información sobre cómo conseguir ayuda."
+        },
+        {
+          "text": "¿Con qué categorías de problemas me puedes ayudar?"
+        },
+        {
+          "text": "¿Podría darme una lista de temas con las que puede ayudarme?"
+        },
+        {
+          "text": "¿Podría esperar un momento por favor?"
+        },
+        {
+          "text": "¿Cuáles son las opciones disponibles si estoy usando agente virtual?"
+        }
+      ],
+      "description": "Solicitar capacidades del bot."
+    },
+    {
+      "intent": "eventos",
+      "examples": [
+        {
+          "text": "cuando es el evento de"
+        },
+        {
+          "text": "puedo saber el calendario para las proximas semanas"
+        },
+        {
+          "text": "cuales son los siguientes actos"
+        },
+        {
+          "text": "que evento toca ahora"
+        },
+        {
+          "text": "cuales son los proximos eventos"
+        },
+        {
+          "text": "que eventos hay en el calendario"
+        },
+        {
+          "text": "que evento es el siguiente"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "General_Greetings",
+      "examples": [
+        {
+          "text": "¿Estás ahí?"
+        },
+        {
+          "text": "Tienes un momento, por favor?"
+        },
+        {
+          "text": "Sigues aquí?"
+        },
+        {
+          "text": "Quién eres?"
+        },
+        {
+          "text": "Hola, Señor."
+        },
+        {
+          "text": "Hola, quien me puede atender?"
+        },
+        {
+          "text": "Hola ¿puedes ayudarme?"
+        },
+        {
+          "text": "Hola, podrías responder mi pregunta?"
+        },
+        {
+          "text": "Hola, me conectas con el soporte tecnico?"
+        },
+        {
+          "text": "Hola, Cómo va todo?"
+        },
+        {
+          "text": "Hola, ¿Cómo te sientes?"
+        },
+        {
+          "text": "Hola, ¿Cómo estás?"
+        },
+        {
+          "text": "Hola, Cómo estás el día de hoy?"
+        },
+        {
+          "text": "Hola, amigo mío."
+        },
+        {
+          "text": "Hey, ¿cómo te va?"
+        },
+        {
+          "text": "¡Estoy feliz de poder hablar contigo por primera vez!"
+        },
+        {
+          "text": "¿Cómo está? / Oye, ¿Qué tal?"
+        },
+        {
+          "text": "Buenos días, podemos empezar la conversación?"
+        },
+        {
+          "text": "Buenas noches."
+        }
+      ],
+      "description": "Saluda al bot."
+    },
+    {
+      "intent": "General_About_You",
+      "examples": [
+        {
+          "text": "Tienes algún interés?"
+        },
+        {
+          "text": "Qué te gusta hacer en tu tiempo libre?"
+        },
+        {
+          "text": "Quiero entender cómo funcionas"
+        },
+        {
+          "text": "Quiero crear un agente virtual que hable portugués"
+        },
+        {
+          "text": "Qué color tienen tus ojos?"
+        },
+        {
+          "text": "¿Puedo hacer mis preguntas usando Siri en lugar de esta aplicación?"
+        },
+        {
+          "text": "Puedo hacerle algunas preguntas de validación de las ventas"
+        },
+        {
+          "text": "¿Puede explicarme la diferencia entre este sistema y cualquier otro?"
+        },
+        {
+          "text": "¿Puede darme información general sobre usted?"
+        },
+        {
+          "text": "¿Con qué tipo de robot estoy interactuando?"
+        },
+        {
+          "text": "Cuántos idiomas hablas?"
+        },
+        {
+          "text": "¿Cuál es su versión?"
+        },
+        {
+          "text": "Me puedes decir como se llama la aplicación?"
+        },
+        {
+          "text": "Me gustaría configurar el bot de conversación para mi negocio."
+        },
+        {
+          "text": "¿Hablas alemán?"
+        },
+        {
+          "text": "Estoy buscando una solución para mejorar mi compromiso con los clientes"
+        },
+        {
+          "text": "¿Eres un representante oficial de conversación?"
+        },
+        {
+          "text": "Dónde estás ahora mismo?"
+        },
+        {
+          "text": "Dime tu nombre completo."
+        },
+        {
+          "text": "De qué país eres?"
+        }
+      ],
+      "description": "Solicitar atributos personales genéricos."
+    },
+    {
+      "intent": "negative_reaction",
+      "examples": [
+        {
+          "text": "put up with it"
+        },
+        {
+          "text": "You are bad"
+        },
+        {
+          "text": "You're asking me too much"
+        },
+        {
+          "text": "You don't know anything"
+        },
+        {
+          "text": "you are useless"
+        },
+        {
+          "text": "You are rubbish"
+        },
+        {
+          "text": "when will you die"
+        },
+        {
+          "text": "What good are you anyway?"
+        },
+        {
+          "text": "Let me out!"
+        },
+        {
+          "text": "let me out"
+        },
+        {
+          "text": "i want you to die"
+        },
+        {
+          "text": "Its not that good"
+        },
+        {
+          "text": "i dont want u to do anything"
+        },
+        {
+          "text": "I didn't say anything about weather."
+        },
+        {
+          "text": "go **** yourself"
+        },
+        {
+          "text": "go and fuck you off"
+        },
+        {
+          "text": "Get out of my car!"
+        },
+        {
+          "text": "die"
+        },
+        {
+          "text": "can you understand me"
+        },
+        {
+          "text": "bad"
+        },
+        {
+          "text": "are you dead yet"
+        }
+      ]
+    },
+    {
+      "intent": "creditos",
+      "examples": [
+        {
+          "text": "que numero de creditos"
+        },
+        {
+          "text": "cuantos creditos mas"
+        },
+        {
+          "text": "cuantos  creditos es"
+        },
+        {
+          "text": "cuantos creditos tiene la catedra"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "goodbyes",
+      "examples": [
+        {
+          "text": "finally reached home.. lock up and cock up.. good nite and good bye for ever"
+        },
+        {
+          "text": "go"
+        },
+        {
+          "text": "going"
+        },
+        {
+          "text": "goodbye"
+        },
+        {
+          "text": "bye"
+        },
+        {
+          "text": "au revoir"
+        },
+        {
+          "text": "adios"
+        },
+        {
+          "text": "adieu"
+        },
+        {
+          "text": "signing off"
+        },
+        {
+          "text": "shut down"
+        },
+        {
+          "text": "shutdown"
+        },
+        {
+          "text": "should go"
+        },
+        {
+          "text": "should be going"
+        },
+        {
+          "text": "gtg"
+        },
+        {
+          "text": "see ya soon"
+        },
+        {
+          "text": "see ya later"
+        },
+        {
+          "text": "see ya"
+        },
+        {
+          "text": "run"
+        },
+        {
+          "text": "over and out"
+        },
+        {
+          "text": "out of time"
+        },
+        {
+          "text": "ok bye"
+        },
+        {
+          "text": "no, bye!"
+        },
+        {
+          "text": "nice day"
+        },
+        {
+          "text": "my time is up"
+        },
+        {
+          "text": "logging off"
+        },
+        {
+          "text": "leave"
+        },
+        {
+          "text": "laters"
+        },
+        {
+          "text": "later"
+        },
+        {
+          "text": "i said goodbye"
+        },
+        {
+          "text": "I'm leaving"
+        },
+        {
+          "text": "Hi, Watson. I want to stop car"
+        },
+        {
+          "text": "hey stop here"
+        },
+        {
+          "text": "Have a nice day"
+        },
+        {
+          "text": "bye bye"
+        },
+        {
+          "text": "see you"
+        },
+        {
+          "text": "bye now"
+        },
+        {
+          "text": "cya"
+        },
+        {
+          "text": "farewell"
+        },
+        {
+          "text": "thanks byebye"
+        },
+        {
+          "text": "then bye"
+        },
+        {
+          "text": "good bye"
+        },
+        {
+          "text": "good day"
+        },
+        {
+          "text": "good night"
+        },
+        {
+          "text": "gotta go"
+        },
+        {
+          "text": "gotta run"
+        },
+        {
+          "text": "toodles"
+        },
+        {
+          "text": "signing out"
+        },
+        {
+          "text": "so long"
+        },
+        {
+          "text": "soon"
+        },
+        {
+          "text": "swag out"
+        }
+      ]
+    },
+    {
+      "intent": "interface_issues",
+      "examples": [
+        {
+          "text": "where is the picture"
+        },
+        {
+          "text": "where is the sound"
+        },
+        {
+          "text": "you aren't talking anymore"
+        },
+        {
+          "text": "system error, unable to lonin"
+        },
+        {
+          "text": "i don't hear any sound"
+        },
+        {
+          "text": "i can't see anything"
+        },
+        {
+          "text": "i cant hear any sound"
+        }
+      ]
+    },
+    {
+      "intent": "Bot_Control_Reject_Response",
+      "examples": [
+        {
+          "text": "De qué estas hablando?"
+        },
+        {
+          "text": "Sobre que me estas hablando?"
+        },
+        {
+          "text": "Que dices?"
+        },
+        {
+          "text": "No te entiendo nada."
+        },
+        {
+          "text": "No necesito eso."
+        },
+        {
+          "text": "No me estas entendiendo."
+        },
+        {
+          "text": "No es una buena repuesta."
+        },
+        {
+          "text": "No estas entendiendo lo que dije."
+        },
+        {
+          "text": "No es lo que pienso."
+        },
+        {
+          "text": "No es lo que he estado buscando."
+        },
+        {
+          "text": "No es lo que estoy preguntando."
+        },
+        {
+          "text": "No entiendo lo que dices."
+        },
+        {
+          "text": "No entiendo."
+        },
+        {
+          "text": "No entendiste la clave."
+        },
+        {
+          "text": "No comprendiste nada."
+        },
+        {
+          "text": "La respuesta es incorrecta."
+        },
+        {
+          "text": "Estas equivocado."
+        },
+        {
+          "text": "Eso no me ayuda."
+        },
+        {
+          "text": "Es la respuesta equivocada."
+        },
+        {
+          "text": "Esa repuesta no es correcta."
+        }
+      ],
+      "description": "Indique que la respuesta del bot no responde a una pregunta."
+    },
+    {
+      "intent": "proyectos_catedra",
+      "examples": [
+        {
+          "text": "que estais haciendo ahora mismo"
+        },
+        {
+          "text": "como trabajais en la catedra"
+        },
+        {
+          "text": "que proyectos está realizando la catedra ahora mismo"
+        },
+        {
+          "text": "que hace la catedra"
+        },
+        {
+          "text": "que hacen los patronos"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "representante",
+      "examples": [
+        {
+          "text": "quien coordina el cambio en la industria 4.0"
+        },
+        {
+          "text": "quien da estos datos"
+        },
+        {
+          "text": "quien gestiona la evolucion"
+        },
+        {
+          "text": "quien es el encargado"
+        },
+        {
+          "text": "quien da esta presetacion"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "inversion",
+      "examples": [
+        {
+          "text": "Cuanta inversion está realizando el grupo?"
+        },
+        {
+          "text": "existe algún proyecto de inversion a futuro"
+        },
+        {
+          "text": "Es la inversion suficiente"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "information_request",
+      "examples": [
+        {
+          "text": "do you know the time"
+        },
+        {
+          "text": "can you tell time"
+        },
+        {
+          "text": "hi what is the time?"
+        },
+        {
+          "text": "tell me the date"
+        },
+        {
+          "text": "what is the day today"
+        },
+        {
+          "text": "hey whats the current time today"
+        },
+        {
+          "text": "what time will it be in 4.5 hours"
+        },
+        {
+          "text": "what time is it right now"
+        },
+        {
+          "text": "what's the time"
+        },
+        {
+          "text": "whats the square root of 70"
+        },
+        {
+          "text": "what's the date"
+        },
+        {
+          "text": "what is today's date"
+        },
+        {
+          "text": "what is the time?"
+        },
+        {
+          "text": "can you say me the time?"
+        }
+      ]
+    },
+    {
+      "intent": "duda_comienzo",
+      "examples": [
+        {
+          "text": "que es esto"
+        },
+        {
+          "text": "para que sirve esto"
+        },
+        {
+          "text": "como funciona esto"
+        },
+        {
+          "text": "esto que es"
+        },
+        {
+          "text": "que funcionalidades tienes"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "General_Ending",
+      "examples": [
+        {
+          "text": "Hablaremos más tarde."
+        },
+        {
+          "text": "Un saludo."
+        },
+        {
+          "text": "¡Salud!"
+        },
+        {
+          "text": "Qué tengas una buena tarde."
+        },
+        {
+          "text": "Qué te lo pases bien."
+        },
+        {
+          "text": "OK, eso es todo lo que necesito saber."
+        },
+        {
+          "text": "No tengo más dudas, gracias por tu ayuda."
+        },
+        {
+          "text": "Nos vemos."
+        },
+        {
+          "text": "¡Muchas gracias, adiós!"
+        },
+        {
+          "text": "Usted es maravilloso. Gracias por su ayuda."
+        },
+        {
+          "text": "Hablamos luego."
+        },
+        {
+          "text": "Gracias por tu ayuda, hasta luego."
+        },
+        {
+          "text": "Cuídate!"
+        },
+        {
+          "text": "Eso ha sido todo lo que me hacía falta."
+        },
+        {
+          "text": "Fue agradable hablar contigo."
+        },
+        {
+          "text": "Gracias no necesito más ayuda."
+        },
+        {
+          "text": "Buenas tardes."
+        },
+        {
+          "text": "Gracias, podemos cerrar esta conversación."
+        },
+        {
+          "text": "Ya me voy."
+        },
+        {
+          "text": "Vaya usted con Diós!"
+        }
+      ],
+      "description": "Fin de la conversacion."
+    },
+    {
+      "intent": "General_Security_Assurance",
+      "examples": [
+        {
+          "text": "¿Qué medidas de seguridad están usadas para asegurar que este chat es seguro?"
+        },
+        {
+          "text": "Quisiera asegurarme que mis detalles de tarjeta están seguros, ¿puedes hacerlo?"
+        },
+        {
+          "text": "¿Puedo ser seguro que mi información de tarjeta guardada está cifrada y asegurada?"
+        },
+        {
+          "text": "¿Puedo confiar en todo lo que leo en este chat?"
+        },
+        {
+          "text": "¿Pueden asegurarme que toda la información de mi cuenta está protegida?"
+        },
+        {
+          "text": "Puede demostrarme que esta conversación es segura?"
+        },
+        {
+          "text": "¿Puede confirmarme si esa red es segura?"
+        },
+        {
+          "text": "¿Mi informacion personal de pago es manejada seguramente?"
+        },
+        {
+          "text": "Hola El usuario desea garantías de que cualquier información que proporciona en la conversación está protegida y segura."
+        },
+        {
+          "text": "Hay algunas precauciones contra los hackers?"
+        },
+        {
+          "text": "¿Hay alguna razón para desconfiar de este chat?"
+        },
+        {
+          "text": "Es esto un chat oficial?"
+        },
+        {
+          "text": "¿Dónde puedo encontrar su certificado de seguridad?"
+        },
+        {
+          "text": "Cómo sé que este chat no es una estafa?"
+        },
+        {
+          "text": "¿Cómo saber que puedo confiar en la información obtenida en esta chat sesión?"
+        },
+        {
+          "text": "¿Cómo reconzco si su página web es confiable?"
+        },
+        {
+          "text": "¿Cómo puedo garantizar la protección de la información de los consumidores?"
+        },
+        {
+          "text": "¿Cómo puede asegurar que nuestra conversación por chat es confiable?"
+        },
+        {
+          "text": "Qué tipos de medidas se han tomado para proteger esta conversación?"
+        },
+        {
+          "text": "Qué sistemas de protección usan contra los hackers?"
+        }
+      ],
+      "description": "Expresar preocupaciones sobre la seguridad del bot."
+    },
+    {
+      "intent": "General_Human_or_Bot",
+      "examples": [
+        {
+          "text": "Hablo con una máquina?"
+        },
+        {
+          "text": "No quiero hablar con el agente virtual."
+        },
+        {
+          "text": "Necesito hablar con alquien vivo."
+        },
+        {
+          "text": "Me confirmas si hablo con un agente virtual o con un agente real?"
+        },
+        {
+          "text": "Hablo con una persona?"
+        },
+        {
+          "text": "Eres un operador virtual o vivo?"
+        },
+        {
+          "text": "Eres una máquina o una persona real?"
+        },
+        {
+          "text": "Eres un agente virtual?"
+        },
+        {
+          "text": "Dejame hablar con un agente."
+        },
+        {
+          "text": "Creo que es mejor hablar con una persona."
+        },
+        {
+          "text": "Con quién estoy hablando?"
+        },
+        {
+          "text": "Cómo puedo contactar con un ser vivo?"
+        },
+        {
+          "text": "Tu eres un agente virtual o real?"
+        },
+        {
+          "text": "Sería posible hablar con una persona?"
+        },
+        {
+          "text": "Quiero hablar con una persona."
+        },
+        {
+          "text": "Puedo hablar con una persona real?"
+        },
+        {
+          "text": "Puedes transferirme a un agente real?"
+        },
+        {
+          "text": "Puedes decirme, si eres vivo o virutal?"
+        },
+        {
+          "text": "Preferiría hablar con un agente virutal."
+        },
+        {
+          "text": "Podría hablar con un agente virutal?"
+        }
+      ],
+      "description": "Preguntar si habla con un humano o un bot."
+    },
+    {
+      "intent": "positive_reaction",
+      "examples": [
+        {
+          "text": "This is good"
+        },
+        {
+          "text": "Thanks."
+        },
+        {
+          "text": "Thanks!"
+        },
+        {
+          "text": "Alright. Thanks!"
+        },
+        {
+          "text": "This is awesome"
+        },
+        {
+          "text": "thanks, man!"
+        },
+        {
+          "text": "thanks for your support"
+        },
+        {
+          "text": "thanks for"
+        },
+        {
+          "text": "Thanks man"
+        },
+        {
+          "text": "Thanks mate"
+        },
+        {
+          "text": "Thanks u"
+        },
+        {
+          "text": "Thanks verymuch"
+        },
+        {
+          "text": "excellent, thanks"
+        },
+        {
+          "text": "Thanks Watson"
+        },
+        {
+          "text": "thanks you are  funy"
+        },
+        {
+          "text": "Thank you very much"
+        },
+        {
+          "text": "thanks dude"
+        },
+        {
+          "text": "great, thanks"
+        },
+        {
+          "text": "Thank you"
+        },
+        {
+          "text": "great, thanks!"
+        },
+        {
+          "text": "great! thanks!"
+        },
+        {
+          "text": "nice. thanks."
+        },
+        {
+          "text": "ok, thanks"
+        },
+        {
+          "text": "OK thanks"
+        },
+        {
+          "text": "thankfully so"
+        },
+        {
+          "text": "Thanks"
+        },
+        {
+          "text": "thanks a truck"
+        },
+        {
+          "text": "you are funny"
+        }
+      ]
+    },
+    {
+      "intent": "Bot_Control_Clarification",
+      "examples": [
+        {
+          "text": "A que te refieres?"
+        },
+        {
+          "text": "Lo siento, puedes repetirlo una vez mas."
+        },
+        {
+          "text": "Lo siento, una vez mas."
+        },
+        {
+          "text": "Me puedes dar mas información?"
+        },
+        {
+          "text": "Recapitulemos"
+        },
+        {
+          "text": "Que quieres decir con eso?"
+        },
+        {
+          "text": "Puede explicarme nuevamente, no entendí."
+        },
+        {
+          "text": "Podriamos empezar de nuevo?"
+        },
+        {
+          "text": "Podemos dar un paso atrás?"
+        },
+        {
+          "text": "No te entiendo muy bien."
+        },
+        {
+          "text": "No respondiste a mi pregunta."
+        },
+        {
+          "text": "No estoy seguro si entendi, podría explicarme nuevamente?"
+        },
+        {
+          "text": "Lo siento pero eso no es lo que estaba preguntando"
+        },
+        {
+          "text": "No entendiste lo que dije."
+        },
+        {
+          "text": "Creo que no entendi, puede repetirlo?"
+        },
+        {
+          "text": "No entendi."
+        },
+        {
+          "text": "Entendiste mal."
+        },
+        {
+          "text": "Eso no es lo que dije."
+        },
+        {
+          "text": "Eso no te estoy preguntando."
+        },
+        {
+          "text": "Explicame de nuevo."
+        }
+      ],
+      "description": "Repita o aclare la última declaración."
+    },
+    {
+      "intent": "Bot_Control_Standby",
+      "examples": [
+        {
+          "text": "Dame un momento."
+        },
+        {
+          "text": "Continuamos en unos minutos?"
+        },
+        {
+          "text": "Regreso ahora."
+        },
+        {
+          "text": "Regreso ahora?"
+        },
+        {
+          "text": "Puedes esperarme un segundo."
+        },
+        {
+          "text": "Puedes esperarme"
+        },
+        {
+          "text": "Puedes darme un momento?"
+        },
+        {
+          "text": "Podemos terminar mas tarde."
+        },
+        {
+          "text": "Ya regreso."
+        },
+        {
+          "text": "Te pongo en espera un momento."
+        },
+        {
+          "text": "Regreso mas tarde."
+        },
+        {
+          "text": "Regreso en un momento."
+        },
+        {
+          "text": "Esperame un segundo."
+        },
+        {
+          "text": "Necesito un momento."
+        },
+        {
+          "text": "Podemos hablar mas tarde?"
+        },
+        {
+          "text": "No tengo la informacion aquí, puedes esperarme?"
+        },
+        {
+          "text": "Esperame en línea."
+        },
+        {
+          "text": "Dejame lo reviso."
+        },
+        {
+          "text": "Dame unos minutos."
+        },
+        {
+          "text": "Dame mas tiempo, no tengo la información aca."
+        }
+      ],
+      "description": "Indique un retraso en la entrada del bot"
+    },
+    {
+      "intent": "robot",
+      "examples": [
+        {
+          "text": "que hacen los robots"
+        },
+        {
+          "text": "dame informacion sobre los robots"
+        },
+        {
+          "text": "son los robot suficientemente"
+        },
+        {
+          "text": "cual es el utlimo robot"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "objetivos",
+      "examples": [
+        {
+          "text": "cual es el objetivo de la catedra"
+        },
+        {
+          "text": "cual es la mision de la catedra"
+        },
+        {
+          "text": "que hace la catedra"
+        },
+        {
+          "text": "para que se ha creado la catedra"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "big_data",
+      "examples": [
+        {
+          "text": "gran cantidad de datos"
+        },
+        {
+          "text": "muchos datos"
+        },
+        {
+          "text": "mejor procesamiento"
+        },
+        {
+          "text": "tratamiento de datos"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Bot_Control_Confirm_Presence",
+      "examples": [
+        {
+          "text": "Me has dejado en espera."
+        },
+        {
+          "text": "Todavia estas en línea?"
+        },
+        {
+          "text": "Te he perdido."
+        },
+        {
+          "text": "Quien esta ahi?"
+        },
+        {
+          "text": "Que te has hecho?"
+        },
+        {
+          "text": "Que esta pasando?"
+        },
+        {
+          "text": "Porque no me respondes?"
+        },
+        {
+          "text": "No te escucho"
+        },
+        {
+          "text": "Necesitas mas tiempo?"
+        },
+        {
+          "text": "Me has escuchado?"
+        },
+        {
+          "text": "Hablame si estas ahi"
+        },
+        {
+          "text": "Estás allá?"
+        },
+        {
+          "text": "Estoy hablando con alguien?"
+        },
+        {
+          "text": "Estas todavía allí?"
+        },
+        {
+          "text": "En donde estas ubicado?"
+        },
+        {
+          "text": "Dónde estás?"
+        },
+        {
+          "text": "Creo que hemos perdido la conexión."
+        },
+        {
+          "text": "Alguien esta ahí?"
+        },
+        {
+          "text": "Alguien allí?"
+        },
+        {
+          "text": "A dónde te has ido?"
+        }
+      ],
+      "description": "Pídale al bot que indique que está disponible."
+    },
+    {
+      "intent": "Bot_Control_Unsure",
+      "examples": [
+        {
+          "text": "Que es lo que buscas?"
+        },
+        {
+          "text": "Para ser sincero, no has entendido."
+        },
+        {
+          "text": "No tengo idea de lo que pides."
+        },
+        {
+          "text": "No se que quieres."
+        },
+        {
+          "text": "No se que necesitas."
+        },
+        {
+          "text": "No se que buscas."
+        },
+        {
+          "text": "No me convences con tu respuesta."
+        },
+        {
+          "text": "Aclarame que deseas."
+        },
+        {
+          "text": "Aclarame que necesitas."
+        },
+        {
+          "text": "Dame una pista."
+        },
+        {
+          "text": "No entendí que es lo que necesitas."
+        },
+        {
+          "text": "No entiendo que es lo que necesitas."
+        },
+        {
+          "text": "No estoy contenta con tu respuesta."
+        },
+        {
+          "text": "No estoy convencida."
+        },
+        {
+          "text": "No he entendido."
+        },
+        {
+          "text": "No estoy segura de lo que necesitas."
+        },
+        {
+          "text": "No estoy muy convencida."
+        },
+        {
+          "text": "Siendo honesto, no entendí."
+        },
+        {
+          "text": "Que quieres decir?"
+        },
+        {
+          "text": "Que es lo que estás buscando?"
+        }
+      ],
+      "description": "Indique que no hay una respuesta definitiva a una pregunta."
+    },
+    {
+      "intent": "General_Negative_Feedback",
+      "examples": [
+        {
+          "text": "El comportamiento del agente era inapropiado."
+        },
+        {
+          "text": "No me has dicho la verdad."
+        },
+        {
+          "text": "El agente era maldistuesto."
+        },
+        {
+          "text": "Cómo te atreves tratarme de este modo?"
+        },
+        {
+          "text": "No estoy de acuerdo."
+        },
+        {
+          "text": "Me has proporcionado la información errónea."
+        },
+        {
+          "text": "Lo que me estás diciendo es muy frustrante."
+        },
+        {
+          "text": "La peor experiencia que he tenido en mi vida con un agente."
+        },
+        {
+          "text": "Increíble, mi problema sigue sin resolverse un mes."
+        },
+        {
+          "text": "Estoy muy decepcionado."
+        },
+        {
+          "text": "Este servicio no sirve para nada."
+        },
+        {
+          "text": "Espero no necesitar tu ayada más."
+        },
+        {
+          "text": "Eres un inútil."
+        },
+        {
+          "text": "No me lo creo."
+        },
+        {
+          "text": "Voy a quejarme."
+        },
+        {
+          "text": "Tu comportamiento es inexcusable."
+        },
+        {
+          "text": "Nunca me has ayudado."
+        },
+        {
+          "text": "No te mereces este trabajo."
+        },
+        {
+          "text": "No puede ser!"
+        },
+        {
+          "text": "No me trates así."
+        }
+      ],
+      "description": "Expresar comentarios desfavorables."
+    },
+    {
+      "intent": "ia",
+      "examples": [
+        {
+          "text": "inteligencia artificial"
+        },
+        {
+          "text": "mejora en los robots"
+        },
+        {
+          "text": "proceso automatico"
+        },
+        {
+          "text": "artificial intelligence"
+        },
+        {
+          "text": "ia"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "help",
+      "examples": [
+        {
+          "text": "ayuda por favor"
+        },
+        {
+          "text": "tengo un problema"
+        },
+        {
+          "text": "no me funciona"
+        },
+        {
+          "text": "no entiendo bien"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "observatorio",
+      "examples": [
+        {
+          "text": "que hace el observatorio"
+        },
+        {
+          "text": "cual es el objetivo del observatorio"
+        },
+        {
+          "text": "cual es el calendario del observatorio"
+        },
+        {
+          "text": "que es el observatorio"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "General_Jokes",
+      "examples": [
+        {
+          "text": "Dime algo divertido."
+        },
+        {
+          "text": "Puedo jugar juegos aquí?"
+        },
+        {
+          "text": "Quiero reírme un poco, cuéntame algo divertido."
+        },
+        {
+          "text": "Qué sueles hacer para divertirte?"
+        },
+        {
+          "text": "Sabes contar chistes?"
+        },
+        {
+          "text": "Sorpréndeme con algo chistoso."
+        },
+        {
+          "text": "Te gusta hacer chistes?"
+        },
+        {
+          "text": "Te gustan los chistes?"
+        },
+        {
+          "text": "Te ha pasado algo chistoso hoy?"
+        },
+        {
+          "text": "Cuál es tu chiste favorito?"
+        },
+        {
+          "text": "Cuéntame un chiste."
+        },
+        {
+          "text": "Puedes entretenerme?"
+        },
+        {
+          "text": "Dime otro chiste!"
+        },
+        {
+          "text": "Dime un chiste."
+        },
+        {
+          "text": "Dime un chiste sarcástico."
+        },
+        {
+          "text": "Divierteme!"
+        },
+        {
+          "text": "Estoy aburrido."
+        },
+        {
+          "text": "Me gustaría que me diviertas."
+        },
+        {
+          "text": "Me gustan los chistes, cuéntame uno."
+        },
+        {
+          "text": "Me aburro."
+        }
+      ],
+      "description": "Solicito una broma"
+    },
+    {
+      "intent": "selections",
+      "examples": [
+        {
+          "text": "what options do ypu have?"
+        },
+        {
+          "text": "what options do you have?"
+        },
+        {
+          "text": "what options are there?"
+        },
+        {
+          "text": "What options?"
+        },
+        {
+          "text": "what option do you have?"
+        },
+        {
+          "text": "what exactly do you have?"
+        }
+      ]
+    },
+    {
+      "intent": "General_Positive_Feedback",
+      "examples": [
+        {
+          "text": "Muchísimas gracias por tu ayuda!"
+        },
+        {
+          "text": "Siempre resuelves mis problemas, gracias."
+        },
+        {
+          "text": "Siempre puedo contar con su ayuda."
+        },
+        {
+          "text": "Perfecto!"
+        },
+        {
+          "text": "Muy bien!"
+        },
+        {
+          "text": "Muy amable!"
+        },
+        {
+          "text": "El agente era muy amable y resolvió mi problema inmediatamente."
+        },
+        {
+          "text": "El mejor soporte."
+        },
+        {
+          "text": "Eres el mejor."
+        },
+        {
+          "text": "Eres una máquina!"
+        },
+        {
+          "text": "Eres un profesional."
+        },
+        {
+          "text": "Espero que me atiendas también la próxima vez."
+        },
+        {
+          "text": "Estoy muy contento con su servicio."
+        },
+        {
+          "text": "Es un placer trabajar contingo."
+        },
+        {
+          "text": "Excelente!"
+        },
+        {
+          "text": "Gracias."
+        },
+        {
+          "text": "Gracias por todo!"
+        },
+        {
+          "text": "Me alegraste el día."
+        },
+        {
+          "text": "Me gustaría rellenar la encuasta de satisfacción."
+        },
+        {
+          "text": "Me salvaste!"
+        }
+      ],
+      "description": "Expresar un sentimiento positivo o gratitud."
+    }
+  ],
+  "entities": [
+    {
+      "entity": "proyectos_catedra",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "proyectos",
+          "synonyms": [
+            "trabajos",
+            "colaboracion"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-percentage",
+      "values": []
+    },
+    {
+      "entity": "empleados",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "empleados",
+          "synonyms": [
+            "trabajadores",
+            "esclavos",
+            "asalariados",
+            "contratados",
+            "en nomina"
+          ]
+        }
+      ],
+      "fuzzy_match": false
+    },
+    {
+      "entity": "G_antolin",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "grupo antolin",
+          "synonyms": [
+            "g antolin",
+            "grupo antol",
+            "grupo antolin",
+            "grup antolin",
+            "g antoln",
+            "gruop antolin"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "acerinox",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "acerinox",
+          "synonyms": [
+            "acerino",
+            "acerinx",
+            "acerinos",
+            "acerinosx"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "ibm",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "ibm",
+          "synonyms": [
+            "ibb",
+            "ibmm"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "enagas",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "enagas",
+          "synonyms": [
+            "engasgas",
+            "enags",
+            "enagas"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "ds_smith",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "ds smith",
+          "synonyms": [
+            "ds smith",
+            "dssmith",
+            "dsmith"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "gestamp",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "gestamp",
+          "synonyms": [
+            "gestam",
+            "gestap",
+            "getamp",
+            "gestampp"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "averiguar",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "quien",
+          "synonyms": [
+            "quienes",
+            "cuales",
+            "cuantos",
+            "que"
+          ]
+        }
+      ]
+    },
+    {
+      "entity": "sys-time",
+      "values": []
+    },
+    {
+      "entity": "sys-number",
+      "values": []
+    },
+    {
+      "entity": "comienzo",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Hola",
+          "synonyms": [
+            "Buenos dias",
+            "Buenas tardes",
+            "Buenas"
+          ]
+        }
+      ]
+    },
+    {
+      "entity": "abb",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "abb",
+          "synonyms": [
+            "ab",
+            "aab",
+            "abbb"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "coordinador",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "coordinador",
+          "synonyms": [
+            "jefe",
+            "boss",
+            "coordinador",
+            "director"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "presidente",
+          "synonyms": [
+            "presi",
+            "president",
+            "jefe",
+            "jefazo"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "catedra",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "catedra",
+          "synonyms": [
+            "CIC",
+            "industria conectada",
+            "catedra IC",
+            "MIC"
+          ]
+        }
+      ]
+    },
+    {
+      "entity": "observatorio",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "observatorio",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "pladur",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "pladur",
+          "synonyms": [
+            "pladr",
+            "pladurr",
+            "paldur"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "patronos",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "patronos",
+          "synonyms": [
+            "patronos",
+            "patron",
+            "patronas",
+            "pratons"
+          ]
+        }
+      ]
+    },
+    {
+      "entity": "eventos",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "eventos",
+          "synonyms": [
+            "actos, ocasiones, presentaciones"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "t_interes",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "IoT",
+          "synonyms": [
+            "IoT",
+            "Internet of things",
+            "Internet de las cosas"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "CBS",
+          "synonyms": [
+            "sistemas ciberfisicos"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "VR",
+          "synonyms": [
+            "VR",
+            "Virtual Reality",
+            "Realidad virtual",
+            "Realidad aumentada"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "IA",
+          "synonyms": [
+            "IA",
+            "Inteligencia Artificial",
+            "Artificial Intelligence"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Robotica",
+          "synonyms": [
+            "robotic",
+            "robotics",
+            "robot",
+            "robots"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Big data",
+          "synonyms": [
+            "Big data"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "ciberseguridad",
+          "synonyms": [
+            "seguridad",
+            "cibersegurity"
+          ]
+        }
+      ]
+    },
+    {
+      "entity": "sys-date",
+      "values": []
+    },
+    {
+      "entity": "indra",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "indra",
+          "synonyms": [
+            "indraa",
+            "indr",
+            "indras"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "noticias",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "noticias",
+          "synonyms": [
+            "news"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "endesa",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "endesa",
+          "synonyms": [
+            "endesa",
+            "endessa",
+            "endeas",
+            "endasa"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    }
+  ],
+  "language": "es",
+  "metadata": {
+    "api_version": {
+      "major_version": "v1",
+      "minor_version": "2018-09-20"
+    }
+  },
+  "description": "",
+  "dialog_nodes": [
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_2_1530109227714",
+      "event_name": "focus",
+      "dialog_node": "handler_4_1530109227714",
+      "previous_sibling": "handler_3_1530109227714"
+    },
+    {
+      "type": "event_handler",
+      "parent": "slot_2_1530109227714",
+      "event_name": "input",
+      "dialog_node": "handler_3_1530109227714"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_1_1535363290789",
+      "event_name": "focus",
+      "dialog_node": "handler_3_1535363290789",
+      "previous_sibling": "handler_2_1535363290789"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_1_1535363290789",
+      "context": {},
+      "metadata": {},
+      "event_name": "input",
+      "dialog_node": "handler_2_1535363290789"
+    },
+    {
+      "type": "standard",
+      "title": "Proyectos",
+      "output": {
+        "text": {
+          "values": [
+            "Actualmente, los proyectos en los que está trabajando la cátedra son : $lista_proyectos"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_3_1523264935584",
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "condition",
+        "dialog_node": "node_8_1535364148008"
+      },
+      "conditions": "@proyectos_catedra && @averiguar",
+      "dialog_node": "node_5_1535363381442",
+      "previous_sibling": "node_3_1523549975104"
+    },
+    {
+      "type": "standard",
+      "title": "Objetivos",
+      "output": {
+        "text": {
+          "values": [
+            "Los objetivos de la cátedra son: $objetivos_catedra"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_3_1523264935584",
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_8_1535364148008"
+      },
+      "conditions": "@averiguar && #objetivos",
+      "dialog_node": "node_3_1538487925646",
+      "previous_sibling": "node_2_1538487515676"
+    },
+    {
+      "type": "standard",
+      "title": "Error - copy1",
+      "output": {
+        "text": {
+          "values": [
+            "Conectamos con Discovery"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_3_1523264935584",
+      "context": {
+        "discovery": true
+      },
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_8_1535364148008"
+      },
+      "dialog_node": "node_9_1530110171823",
+      "previous_sibling": "node_4_1535363345719"
+    },
+    {
+      "type": "standard",
+      "title": "Trabajo_catedra",
+      "output": {
+        "text": {
+          "values": [
+            "Las ofertas de trabajo disponibles las puedes encontrar en: $link_trabajo"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_3_1523264935584",
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_8_1535364148008"
+      },
+      "conditions": "#ofertas_trabajo",
+      "dialog_node": "node_4_1538578005874",
+      "previous_sibling": "node_2_1538577694859"
+    },
+    {
+      "type": "standard",
+      "title": "Observatorio",
+      "output": {
+        "text": {
+          "values": [
+            "El calendario del observatorio lo puede encontrar aqui: $link_observatorio"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_3_1523264935584",
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "condition",
+        "dialog_node": "node_8_1535364148008"
+      },
+      "conditions": "@observatorio && @averiguar",
+      "dialog_node": "node_4_1535363345719",
+      "previous_sibling": "node_6_1535363403379"
+    },
+    {
+      "type": "event_handler",
+      "parent": "node_3_1523264935584",
+      "event_name": "focus",
+      "dialog_node": "handler_14_1523869392076",
+      "previous_sibling": "slot_1_1535363290789"
+    },
+    {
+      "type": "standard",
+      "title": "Coste_catedra",
+      "output": {
+        "text": {
+          "values": [
+            "El precio de catedra es: $precio_catedra"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_3_1523264935584",
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_8_1535364148008"
+      },
+      "conditions": "#money",
+      "dialog_node": "node_1_1538577570005",
+      "previous_sibling": "node_3_1538487925646"
+    },
+    {
+      "type": "standard",
+      "title": "Noticias",
+      "output": {
+        "text": {
+          "values": [
+            "Puede encontrar las últimas noticias en: $link_noticias"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_3_1523264935584",
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "condition",
+        "dialog_node": "node_8_1535364148008"
+      },
+      "conditions": "@noticias && @averiguar",
+      "dialog_node": "node_6_1535363403379",
+      "previous_sibling": "node_5_1535363381442"
+    },
+    {
+      "type": "standard",
+      "title": "Coordinador",
+      "output": {
+        "text": {
+          "values": [
+            "El equipo de la cátedra es:$equipo_CIC\n"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_3_1523264935584",
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_8_1535364148008"
+      },
+      "conditions": "@averiguar && @coordinador",
+      "dialog_node": "node_2_1538487515676",
+      "previous_sibling": "node_9_1530110171823"
+    },
+    {
+      "type": "standard",
+      "title": "Creditos",
+      "output": {
+        "text": {
+          "values": [
+            "Los créditos del MIC son: $creditos_catedra"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_3_1523264935584",
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_8_1535364148008"
+      },
+      "conditions": "#creditos",
+      "dialog_node": "node_2_1538577694859",
+      "previous_sibling": "node_1_1538577570005"
+    },
+    {
+      "type": "standard",
+      "title": "Eventos",
+      "output": {
+        "text": {
+          "values": [
+            "Los eventos que están organizados puede encontrarlos en: $link_eventos"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_3_1523264935584",
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "condition",
+        "dialog_node": "node_8_1535364148008"
+      },
+      "conditions": "@eventos && @averiguar",
+      "dialog_node": "node_3_1523549975104",
+      "previous_sibling": "handler_14_1523869392076"
+    },
+    {
+      "type": "standard",
+      "title": "Contacto",
+      "output": {
+        "text": {
+          "values": [
+            "El contacto de la cátedra es: "
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_3_1523264935584",
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_8_1535364148008"
+      },
+      "conditions": "#contacto",
+      "dialog_node": "node_5_1538578096698",
+      "previous_sibling": "node_4_1538578005874"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_3_1523264935584",
+      "metadata": {},
+      "dialog_node": "slot_1_1535363290789"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_2_1536766171410",
+      "event_name": "focus",
+      "dialog_node": "handler_4_1536766171410",
+      "previous_sibling": "handler_3_1536766171410"
+    },
+    {
+      "type": "event_handler",
+      "parent": "slot_2_1536766171410",
+      "event_name": "input",
+      "dialog_node": "handler_3_1536766171410"
+    },
+    {
+      "type": "slot",
+      "parent": "node_1_1523549579122",
+      "dialog_node": "slot_2_1536766171410",
+      "previous_sibling": "node_1_1535469409379"
+    },
+    {
+      "type": "event_handler",
+      "parent": "node_1_1523549579122",
+      "event_name": "focus",
+      "dialog_node": "handler_29_1523870227040",
+      "previous_sibling": "slot_2_1536766171410"
+    },
+    {
+      "type": "standard",
+      "title": "Discovery global",
+      "output": {
+        "text": {
+          "values": [
+            "Espere mientras conecto con el Discovery"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_1_1523549579122",
+      "context": {
+        "discovery": true
+      },
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_8_1535364148008"
+      },
+      "conditions": "true",
+      "dialog_node": "node_1_1535469409379"
+    },
+    {
+      "type": "frame",
+      "title": "Temas interes",
+      "output": {
+        "text": {
+          "values": [],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_5_1530109559444",
+      "metadata": {
+        "fallback": "leave"
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1535469409379"
+      },
+      "conditions": "not @patronos && not @catedra && not #greetings",
+      "dialog_node": "node_1_1523549579122",
+      "digress_out": "allow_all",
+      "previous_sibling": "node_3_1523264935584",
+      "digress_out_slots": "not_allowed"
+    },
+    {
+      "type": "standard",
+      "title": "Hola de nuevo",
+      "output": {
+        "text": {
+          "values": [
+            "Hola, ¿que necesita?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_5_1530109559444",
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_5_1530109559444"
+      },
+      "conditions": "#greetings",
+      "dialog_node": "node_7_1535363720062",
+      "previous_sibling": "node_1_1523549579122"
+    },
+    {
+      "type": "standard",
+      "title": "Vuelta a empezar",
+      "output": {
+        "text": {
+          "values": [
+            "¿Puedo ayudarte con algo más?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_5_1530109559444",
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_5_1530109559444"
+      },
+      "conditions": "true",
+      "dialog_node": "node_8_1535364148008",
+      "previous_sibling": "node_7_1535363720062"
+    },
+    {
+      "type": "frame",
+      "title": "Patronos",
+      "output": {},
+      "parent": "node_5_1530109559444",
+      "context": {},
+      "metadata": {
+        "fallback": "leave"
+      },
+      "next_step": {
+        "behavior": "skip_user_input"
+      },
+      "conditions": "@patronos || #patronos",
+      "dialog_node": "node_1_1523264534495",
+      "digress_out": "allow_all",
+      "previous_sibling": "node_1_1538487239841",
+      "digress_out_slots": "not_allowed"
+    },
+    {
+      "type": "frame",
+      "title": "CIC",
+      "output": {
+        "text": {
+          "values": [],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_5_1530109559444",
+      "context": {
+        "link_eventos": "https://www.comillas.edu/es/proximos-eventos-catedra-industria-conectada",
+        "link_noticias": "https://www.comillas.edu/es/noticias-catedra-industria-conectada",
+        "lista_proyectos": "<ul><li>IBM gestor del conocimiento</li></ul>",
+        "link_observatorio": "https://www.comillas.edu/es/observatorio-catedra-industria-conectada"
+      },
+      "metadata": {
+        "fallback": "leave"
+      },
+      "next_step": {
+        "behavior": "skip_user_input"
+      },
+      "conditions": "@catedra || #catedra",
+      "dialog_node": "node_3_1523264935584",
+      "digress_out": "allow_all",
+      "previous_sibling": "node_1_1523264534495",
+      "digress_out_slots": "not_allowed"
+    },
+    {
+      "type": "standard",
+      "title": "Que es esto",
+      "output": {
+        "text": {
+          "values": [
+            "Bienvenido al Chatbot de la Cátedra de Industria Conectada, puedes preguntar lo que quieras. Información sobre la cátedra, los patronos o cualquier cosa que te interese!"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_5_1530109559444",
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_8_1535364148008"
+      },
+      "conditions": "@averiguar && #duda_comienzo",
+      "dialog_node": "node_1_1538487239841"
+    },
+    {
+      "type": "event_handler",
+      "parent": "node_1_1523264534495",
+      "event_name": "focus",
+      "dialog_node": "handler_1_1523868800014",
+      "previous_sibling": "slot_2_1530109227714"
+    },
+    {
+      "type": "standard",
+      "title": "lista",
+      "output": {
+        "text": {
+          "values": [
+            "Los patronos que colaboran con la catedra son: $lista_patronos"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_1_1523264534495",
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "condition",
+        "dialog_node": "node_8_1535364148008"
+      },
+      "conditions": "@averiguar && not @empleados",
+      "dialog_node": "node_2_1523549904672",
+      "previous_sibling": "handler_1_1523868800014"
+    },
+    {
+      "type": "standard",
+      "title": "Trabajo_patronos",
+      "output": {
+        "text": {
+          "values": [
+            "Las ofertas de trabajo disponibles las puedes encontrar en: $link_trabajo"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_1_1523264534495",
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_8_1535364148008"
+      },
+      "conditions": "#ofertas_trabajo",
+      "dialog_node": "node_3_1538577812697",
+      "previous_sibling": "node_8_1530110125848"
+    },
+    {
+      "type": "standard",
+      "title": "empleados",
+      "output": {
+        "text": {
+          "values": [
+            "$espera"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_1_1523264534495",
+      "context": {
+        "discovery": true
+      },
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_8_1535364148008"
+      },
+      "conditions": "@empleados && @averiguar",
+      "dialog_node": "node_1_1530108216484",
+      "previous_sibling": "node_2_1523549904672"
+    },
+    {
+      "type": "standard",
+      "title": "Error",
+      "output": {
+        "text": {
+          "values": [],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_1_1523264534495",
+      "context": {
+        "discovery": true
+      },
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1535469409379"
+      },
+      "conditions": "not @averiguar && not @empleados",
+      "dialog_node": "node_8_1530110125848",
+      "previous_sibling": "node_1_1530108216484"
+    },
+    {
+      "type": "slot",
+      "parent": "node_1_1523264534495",
+      "dialog_node": "slot_2_1530109227714"
+    },
+    {
+      "type": "standard",
+      "title": "En otras cosas",
+      "output": {
+        "text": {
+          "values": [
+            "No he entendido su referencia, ¿puede repetir?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_5_1530109559444"
+      },
+      "conditions": "anything_else",
+      "dialog_node": "En otras cosas",
+      "previous_sibling": "node_5_1530109559444"
+    },
+    {
+      "type": "standard",
+      "title": "Checkpoint",
+      "output": {
+        "text": {
+          "values": [],
+          "selection_policy": "sequential"
+        }
+      },
+      "metadata": {},
+      "next_step": {
+        "behavior": "skip_user_input"
+      },
+      "conditions": "true",
+      "dialog_node": "node_5_1530109559444",
+      "previous_sibling": "Bienvenido"
+    },
+    {
+      "type": "standard",
+      "title": "Bienvenido",
+      "output": {
+        "text": {
+          "values": [
+            "Hola. ¿Cómo puedo ayudarle?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "context": {
+        "espera": "Espere un momento mientras conecto con Watson Discovery",
+        "equipo_CIC": "<ul><li>Director: Mariano Ventosa</li><li>Coodirecto: Bernardo Villazan</li><li>Coordinador: Alvaro López</li></ul>",
+        "link_trabajo": "\"https://www.iit.comillas.edu/\"",
+        "lista_patronos": "<ul><li>Gestamp</li><li>Grupo Antolin</li><li>Enagas</li><li>ABB</li><li>Acerinox</li><li>Indra</li><li>IBM</li><li>Pladur</li><li>Endesa</li><li>DS Smith</li></ul>",
+        "precio_catedra": "500€/mes",
+        "contacto_catedra": "Alvaro López : alvaro.lopez\"@\"iit.comillas.edu",
+        "creditos_catedra": "20 ECTS",
+        "objetivos_catedra": "<ul><li>Contribuir a que la industria española aproveche las oportunidades que ofrece la denominada “Cuarta Revolución Industrial”</li><li>Crear un foro de confianza entre empresas industriales y tecnológicas para facilitar: que los patronos tecnológicos comprendan mejor las necesidades de las empresas industriales y  que los patronos industriales entiendan qué tecnologías pueden influir de forma positiva en su actividad</li><li>Definir y formar los nuevos perfiles profesionales</li></ul>"
+      },
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_5_1530109559444"
+      },
+      "conditions": "welcome",
+      "dialog_node": "Bienvenido"
+    }
+  ],
+  "workspace_id": "2eccc8a5-3bf3-417c-94fa-14eb1cdb9f44",
+  "counterexamples": [],
+  "learning_opt_out": false,
+  "status": "Available"
+}
